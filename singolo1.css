@@ -4,14 +4,6 @@ body {
     margin: 0 auto;
 }
 
-header {
-    
-}
-
-h1 {
-    margin-top: 0px;
-}
-
 h2 {
     margin-top: 0px;
 }
@@ -26,10 +18,13 @@ padding: 0px 40px 0px 40px;
 
 header .wraper {
     background-color: #2d303a;
+    justify-content: space-around;
+    display: flex;
+    height: 94px;
 }
 
 .logo {
-
+    padding-top: 40px;
 }
 
 .header__menu {
@@ -37,11 +32,20 @@ header .wraper {
 }
 
 .header__menu_table {
-
+    display: inline-block;
 }
 
 .table_item {
-
+    padding-top: 20px;
+    margin-top: 0;
+    display: inline-block;
+    font-family: Lato;
+    font-size: 12.5px;
+    font-weight: bold;
+    line-height: 0.56;
+    text-align: justify;
+    color: #ffffff;
+    text-transform: uppercase;
 }
 
 header .line {
@@ -49,8 +53,10 @@ header .line {
 }
 
 .slider {
-    height: 600px;
+    display: flex;
+    height: 594px;
     background-color: #f06c64;
+
 }
 
 .slider__button {
@@ -73,48 +79,75 @@ header .line {
 
 }
 
-.slider .line {
+.wraper .line {
     background-color: #ea676b;
 }
 
-main {
-    background-color: #f2f2f2;
+.our-services h1 {
+    font-family: Lato;
+    font-size: 29.5px;
+    font-weight: 900;
+    line-height: 0.62;
+    text-align: justify;
+    margin-top: 0px;
+    padding-top: 70px;
+    color: #666d89;
+  }
+
+  .our-services p {
+    font-family: Lato;
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 1.55;
+    text-align: justify;
+    margin-top: -2px;
+    color: #767e9e;
 }
 
-.services {
-
+.services_item h2 {
+    object-fit: contain;
+    font-family: Lato;
+    font-size: 17.5px;
+    font-weight: 900;
+    line-height: 1.33;
+    text-align: justify;
+    margin-bottom: -5px;
+    color: #666d89;
 }
 
-.our-services {
-
-}
+.services_item p {
+    object-fit: contain;
+    font-family: Lato;
+    font-size: 12px;
+    line-height: 1.83;
+    text-align: justify;
+    color: #767e9e;
+  }
 
 .services-ico {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  width: 953px;
+  margin-top: 49px;
 }
 
 
 .services_item {
-    display: flex;
-    flex-basis: 33.333333%;
-    width: 299px;
-        
+    display: flex;       
 }
 
 .item_text {
-    flex-basis: 80%;
-    padding-left: 30px;
-    margin-top: -2px;
+    flex-basis: 68%;
+    padding-left: 20px;
+    margin-top: 0px;
 }
 
 .circle {
     display: flex;
-    flex-basis: 20%;
-    margin-top: 2px;
-    width: 59px;
-    height: 59px;
+    flex-basis: 18%;
+    margin-top: 0px;
+    width: 60px;
+    height: 60px;
     border: 1px solid #666d89;
     border-radius: 50%;
     -webkit-border-radius: 50%;
