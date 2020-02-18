@@ -1,3 +1,105 @@
 body {
-    width: 1200px;
+    font-family: 'Lato', sans-serif;
+    width: 1020px;
+    margin: 0 auto;
+}
+
+header {
+    
+}
+
+.line {
+    height: 6px;
+    }
+
+.wraper {
+
+}
+
+.logo {
+
+}
+
+.header__menu {
+
+}
+
+.header__menu_table {
+
+}
+
+.table_item {
+
+}
+
+header .line {
+    background-color: #323746;
+}
+
+.slider {
+
+}
+
+.slider__button {
+
+}
+
+.slider__button_left {
+
+}
+
+.slider__button_right {
+
+}
+
+.slider__iphone_vertical {
+
+}
+
+.slider__iphone_horisontal {
+
+}
+
+.services {
+
+}
+
+.our-services {
+
+}
+
+.services-ico {
+
+}
+
+.services_item {
+
+}
+
+.item__pencil {
+
+}
+
+.item__lamp {
+
+}
+
+.item__heart {
+
+}
+
+.item__phone {
+
+}
+
+.item__speech-bubble {
+
+}
+
+.item__star {
+
+}
+
+main .line {
+
 }
