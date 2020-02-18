@@ -8,12 +8,24 @@ header {
     
 }
 
+h1 {
+    margin-top: 0px;
+}
+
+h2 {
+    margin-top: 0px;
+}
+
+.padding-site {
+padding: 0px 40px 0px 40px;
+}
+
 .line {
     height: 6px;
     }
 
-.wraper {
-
+header .wraper {
+    background-color: #2d303a;
 }
 
 .logo {
@@ -37,18 +49,19 @@ header .line {
 }
 
 .slider {
-
+    height: 600px;
+    background-color: #f06c64;
 }
 
 .slider__button {
 
 }
 
-.slider__button_left {
+.left {
 
 }
 
-.slider__button_right {
+.right {
 
 }
 
@@ -60,6 +73,14 @@ header .line {
 
 }
 
+.slider .line {
+    background-color: #ea676b;
+}
+
+main {
+    background-color: #f2f2f2;
+}
+
 .services {
 
 }
@@ -69,37 +90,82 @@ header .line {
 }
 
 .services-ico {
-
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
+
 
 .services_item {
-
+    display: flex;
+    flex-basis: 33.333333%;
+    width: 299px;
+        
 }
 
-.item__pencil {
+.item_text {
+    flex-basis: 80%;
+    padding-left: 30px;
+    margin-top: -2px;
+}
 
+.circle {
+    display: flex;
+    flex-basis: 20%;
+    margin-top: 2px;
+    width: 59px;
+    height: 59px;
+    border: 1px solid #666d89;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+
+
+.item__pencil {
+    margin: auto;
+    background: url(./assets/img/pencil.svg);
+    width: 32px;
+    height: 32px;
 }
 
 .item__lamp {
-
+    margin: auto;
+    background: url(./assets/img/lamp.svg);
+    width: 22px;
+    height: 32px;
 }
 
 .item__heart {
-
+    margin: auto;
+    background: url(./assets/img/heart.svg);
+    width: 32px;
+    height: 28px;
 }
 
 .item__phone {
-
+    margin: auto;
+    background: url(./assets/img/phone.svg);
+    width: 22px;
+    height: 32px;
 }
 
 .item__speech-bubble {
-
+    margin: auto;
+    background: url(./assets/img/bubble.svg);
+    width: 32px;
+    height: 28px;
 }
 
 .item__star {
-
+    margin: auto;
+    background: url(./assets/img/star.svg);
+    width: 31px;
+    height: 31px;
 }
 
 main .line {
-
+    background-color: #fff;
 }
