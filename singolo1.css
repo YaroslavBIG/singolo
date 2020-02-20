@@ -71,11 +71,11 @@ header .line {
 
 }
 
-.slider__iphone_vertical {
+.slider__iphone .vertical {
 
 }
 
-.slider__iphone_horisontal {
+.slider__iphone .horisontal {
 
 }
 
@@ -109,7 +109,7 @@ header .line {
     font-family: Lato;
     font-size: 17.5px;
     font-weight: 900;
-    line-height: 1.33;
+    line-height: 1.2;
     text-align: justify;
     margin-bottom: -5px;
     color: #666d89;
@@ -119,6 +119,7 @@ header .line {
     object-fit: contain;
     font-family: Lato;
     font-size: 12px;
+    font-weight: 400;
     line-height: 1.83;
     text-align: justify;
     color: #767e9e;
@@ -127,27 +128,28 @@ header .line {
 .services-ico {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
+  grid-row-gap: 20px;
   width: 953px;
-  margin-top: 49px;
+  margin-top: 47px;
 }
 
 
 .services_item {
-    display: flex;       
+    display: flex; 
+    width: 320px;      
 }
 
 .item_text {
     flex-basis: 68%;
-    padding-left: 20px;
+    padding-left: 19px;
     margin-top: 0px;
 }
 
 .circle {
     display: flex;
-    flex-basis: 18%;
-    margin-top: 0px;
-    width: 60px;
-    height: 60px;
+    flex-basis: 19%;
+    margin-top: 4px;
+    height: 56px;
     border: 1px solid #666d89;
     border-radius: 50%;
     -webkit-border-radius: 50%;
