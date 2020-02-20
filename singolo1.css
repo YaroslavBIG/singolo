@@ -4,6 +4,11 @@ body {
     margin: 0 auto;
 }
 
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
 h2 {
     margin-top: 0px;
 }
@@ -25,7 +30,7 @@ header .wraper {
 
 .logo {
     padding-top: 40px;
-    font-family: Lato;
+    font-family: 'Lato', Verdana, sans-serif;
     font-size: 25px;
     font-weight: 700;
     line-height: 0.28;
@@ -40,7 +45,7 @@ header .wraper {
     }
 
 .header__menu {
-    padding-left: 219px;
+    padding-left: 287px;
     padding-top: 12px;
 }
 
@@ -49,21 +54,29 @@ header .wraper {
 }
 
 .table_item {
-    padding-top: 20px;
+    padding-top: 23px;
+    padding-left: 21px;
     margin-top: 0;
     display: inline-block;
     font-family: Lato;
-    font-size: 12.5px;
-    font-weight: bold;
-    line-height: 0.56;
-    text-align: justify;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 0.55;
     color: #ffffff;
     text-transform: uppercase;
 }
 
-.table_item::after {
-    content: ' . ';
-}
+.table_item:not(:first-child)::before{
+        content: ".";
+        position: relative;
+        bottom: 3px;
+        left: -12px;
+        font-weight: 400;
+        font-size: 19px;
+        font-family: Lato;
+        color: #494e62;
+    }
+
 
 header .line {
     background-color: #323746;
