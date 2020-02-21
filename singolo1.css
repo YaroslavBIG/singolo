@@ -24,20 +24,19 @@ h2 {
 header .wraper {
     display: flex;
     justify-content: space-between;
-    height: 94px;
+    height: 88px;
     background-color: #2d303a;
 }
 
 .logo {
-    padding-top: 40px;
+    padding-top: 27px;
     text-align: justify;
-    letter-spacing: 0.2px;
+    letter-spacing: -0.7px;
     text-transform: uppercase;
     color: #ffffff;
     font-family: 'Lato', Verdana, sans-serif;
-    font-size: 24px;
+    font-size: 19pt;
     font-weight: 700;
-    line-height: 0.3;
 }
 
 .logo h1 {
@@ -54,7 +53,7 @@ header .wraper {
 
 .header__menu {
     padding-top: 2px;
-    padding-left: 292px;
+    padding-left: 287px;
     white-space: nowrap;
 }
 
@@ -97,7 +96,7 @@ header .wraper {
 
 
 header .line {
-    background-color: #323746;
+    background-color: #494e62;
 }
 
 .slider {
@@ -147,7 +146,7 @@ header .line {
     left: 112px;
 }
 
-.iphone-set {
+.iphone {
     position: relative;
 }
 
@@ -202,7 +201,11 @@ header .line {
     background-color: #ea676b;
 }
 
-.our-services h1 {
+.services {
+    min-height: 900px;
+}
+
+.services-our h1 {
     margin-top: 0px;
     padding-top: 69px;
     text-align: justify;
@@ -211,16 +214,17 @@ header .line {
     font-size: 29.5px;
     font-weight: 900;
     line-height: 0.62;
+    letter-spacing: 0.04px;
 }
 
-.our-services p {
-    margin-top: -2px;
+.services-our p {
+    margin-top: -4px;
     text-align: justify;
     color: #767e9e;
     font-family: 'Lato', Verdana, sans-serif;
     font-size: 18px;
     font-weight: 300;
-    line-height: 1.58;
+    line-height: 1.68;
 }
 
 .services_item h2 {
@@ -228,10 +232,9 @@ header .line {
     text-align: justify;
     color: #666d89;
     font-family: 'Lato', Verdana, sans-serif;
-    font-size: 17.5px;
+    font-size: 17.80px;
     font-weight: 900;
     line-height: 1.3;
-    object-fit: contain;
 }
 
 .services_item p {
@@ -240,17 +243,15 @@ header .line {
     font-family: 'Lato', Verdana, sans-serif;
     font-size: 12px;
     font-weight: 400;
-    line-height: 1.83;
-    object-fit: contain;
+    line-height: 16.455pt;
 }
 
 .services-ico {
     display: grid;
-    margin-top: 47px;
+    margin-top: 44.5px;
     margin-left: 1px;
-    grid-template-columns: 4fr 4fr 4fr;
-    grid-template-columns: 320px 320px 320px;
-    grid-template-rows: 124px;
+    grid-template-columns: 319px 321px 320px;
+    grid-template-rows: 123px;
 }
 
 
@@ -264,14 +265,15 @@ header .line {
     overflow: hidden;
     width: 220px;
     margin-top: -1px;
-    padding-left: 21px;
+    padding-left: 20px;
+    letter-spacing: 0.015px;
 }
 
-.circle {
+.item_circle {
     display: flex;
-    flex-basis: 17.4%;
+    width: 55px;
     height: 55px;
-    margin-top: 2px;
+    margin-top: 3px;
     border: 2px solid #666d89;
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
@@ -281,43 +283,44 @@ header .line {
 }
 
 
-.item__pencil {
+.item_pencil {
     width: 32px;
     height: 32px;
     margin: auto;
     background: url(./assets/img/pencil.svg);
 }
 
-.item__lamp {
+.item_lamp {
     width: 22px;
-    height: 32px;
+    height: 33px;
     margin: auto;
     background: url(./assets/img/lamp.svg);
+    background-repeat: no-repeat;
 }
 
-.item__heart {
+.item_heart {
     width: 32px;
     height: 28px;
     margin: auto;
     background: url(./assets/img/heart.svg);
 }
 
-.item__phone {
+.item_phone {
     width: 22px;
     height: 32px;
     margin: auto;
     background: url(./assets/img/phone.svg);
 }
 
-.item__speech-bubble {
+.item_speech-bubble {
     width: 32px;
     height: 28px;
     margin: auto;
     background: url(./assets/img/bubble.svg);
 }
 
-.item__star {
-    width: 31px;
+.item_star {
+    width: 32px;
     height: 31px;
     margin: auto;
     background: url(./assets/img/star.svg);
