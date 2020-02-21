@@ -1,6 +1,6 @@
 body {
     font-family: 'Lato', Verdana, sans-serif;
-    width: 1020px;
+    max-width: 1020px;
     margin: 0 auto;
 }
 
@@ -39,18 +39,35 @@ header .wraper {
     text-transform: uppercase;
     color: #ffffff;
 }
+
+.logo h1 {
+    visibility: hidden;
+}
+
+.logo:hover {
+    color: #f06c64;
+}
       
-.logo span:last-child {
+.logo a span span {
     color: #f06c64;
     }
 
 .header__menu {
     padding-left: 292px;
     padding-top: 2px;
+    white-space: nowrap;
+}
+
+.header__menu_active {
+    color: #f06c64;
 }
 
 .header__menu_table {
     display: inline-block;
+}
+
+.header__menu_table a:hover {
+    color: #f06c64;
 }
 
 .table_item {
@@ -91,6 +108,19 @@ header .line {
 
 .slider__button {
     position: absolute;
+}
+
+.slider__button a img {
+    transition:all 5s ease-out;
+    -webkit-transition:all 5s ease-out;
+    -moz-transition:all 5s ease-out;
+    -ms-transition:all 5s ease-out;
+    -o-transition:all 5s ease-out;
+}
+
+.slider__button:hover {
+   filter: opacity(25%);
+   -webkit-filter: opacity(25%);
 }
 
 .left {
@@ -141,6 +171,11 @@ header .line {
     -ms-transform: rotate(-90deg);
     -o-transform: rotate(-90deg);
 }
+
+.base-background_hover:hover {
+    filter: opacity(0%);
+    -webkit-filter: opacity(0%);
+} 
 
 .shadow_vertical {
     z-index: 1;
@@ -228,6 +263,7 @@ header .line {
     padding-left: 21px;
     margin-top: -1px;
     width: 220px;
+    overflow: hidden;
 }
 
 .circle {
