@@ -29,7 +29,7 @@ header .wraper {
 }
 
 .logo {
-    padding-top: 27px;
+    padding-top: 28px;
     text-align: justify;
     letter-spacing: -0.7px;
     text-transform: uppercase;
@@ -96,7 +96,7 @@ header .wraper {
 
 
 header .line {
-    background-color: #494e62;
+    background-color: #323746;
 }
 
 .slider {
@@ -202,7 +202,8 @@ header .line {
 }
 
 .services {
-    min-height: 900px;
+    min-height: 494px;
+    background-color: #f2f2f2;
 }
 
 .services-our h1 {
