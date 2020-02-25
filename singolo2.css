@@ -24,6 +24,7 @@ h2 {
 .portfolio {
     background-color: #2d303a;
     min-height: 864px;
+    padding: 0px 30px 0px 40px
 }
 
 .porfolio-text h2 {
@@ -50,7 +51,7 @@ h2 {
 }
 
 .porfolio_menu {
-    margin-top: 19px;
+    margin-top: 18px;
 }
 
 .porfolio_menu ul {
@@ -69,7 +70,6 @@ h2 {
 
 .porfolio_menu ul li:before {
     content: "";
-    /*display: inline-block;*/
     height: 100%;
     vertical-align: middle;
 }
@@ -77,7 +77,6 @@ h2 {
 .porfolio_menu ul li a{
     font-family: Lato;
     font-size: 12px;
-    line-height: 1.6;
     letter-spacing: -0.04pt;
     text-align: justify;
     color: #767e9e;
@@ -85,11 +84,14 @@ h2 {
 
 .portfolio-images {
     display: grid;
-    margin-top: 18px;
+    margin-top: 19px;
     margin-left: 0px;
-    grid-template-columns: 220px 220px 220px 220px;
+    grid-template-columns: repeat(4, 220px);
     grid-template-rows: 187px;
     grid-gap: 20px;
+   /*Hide elements > 12*/
+    overflow: hidden;
+    height: 616px;
 }
 
 .portfolio_item {
@@ -174,7 +176,7 @@ h2 {
 }
 
 .about-us_text {
-
+    margin-left: 1px;
 }
 
 .about-us_text h2 {
@@ -191,20 +193,19 @@ h2 {
 .about-us_text p {
     text-align: justify;
     margin-top: 18px;
-    margin-bottom: 49px;
+    margin-bottom: 44px;
+
     color: #767e9e;
     font-family: 'Lato', Verdana, sans-serif;
     font-size: 17px;
     font-weight: 300;
-    line-height: 20.4pt;
-    letter-spacing: 0.05pt;
+    line-height: 23pt;
+    letter-spacing: 0.31pt;
 }
 
 .about-us_photo {
     display: grid;
-    margin-top: 18px;
-    margin-left: 0px;
-    grid-template-columns: 300px 300px 300px;
+    grid-template-columns: repeat(3, 300px);
     grid-template-rows: 300px;
     grid-gap: 20px;
 }
@@ -228,6 +229,7 @@ h2 {
 
 .photo_img-3 {
     background-image: url(./assets/img/about/Scolara.png);
+    margin-left: 2px;
 }
 
 .photo h3 {
