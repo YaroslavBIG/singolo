@@ -85,13 +85,14 @@ h2 {
 .portfolio-images {
     display: grid;
     margin-top: 19px;
-    margin-left: 0px;
     grid-template-columns: repeat(4, 220px);
     grid-template-rows: 187px;
     grid-gap: 20px;
-   /*Hide elements > 12*/
-    overflow: hidden;
-    height: 616px;
+}
+ 
+/*Hide elements > 12*/
+.portfolio-images :nth-child(n+13) {
+    display: none;
 }
 
 .portfolio_item {
