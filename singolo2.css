@@ -25,6 +25,12 @@ article {
     height: 6px;
 }
 
+.link {
+    display: block;
+    text-align: center;
+    height: 100%;
+}
+
 .portfolio {
     background-color: #2d303a;
     min-height: 864px;
@@ -58,37 +64,47 @@ article {
     margin-top: 18px;
 }
 
-.porfolio_menu ul {
-    list-style-type: none;
+.menu {
+    display: flex;
     margin-left: -38px;
     margin-top: -8px;
 }
 
-.porfolio_menu ul li{
-    display: inline-block;
-    border: solid 1px #666d89;
-    border-radius: 5px;
-    margin-right: 7px;
-    padding: 0px 6px 0px 6px;
-}
-
-.porfolio_menu ul li:before {
-    content: "";
-    height: 100%;
-    vertical-align: middle;
-}
-
-.porfolio_menu ul li a{
+.menu_link {
+    list-style: none;
+    cursor: pointer;
     font-family: Lato;
     font-size: 12px;
-    letter-spacing: -0.04pt;
-    text-align: justify;
+    letter-spacing: -0.02pt;
+    line-height: 16pt;
     color: #767e9e;
+    border: solid 1px #666d89;
+    border-radius: 5px;
+    margin-right: 11px;
+    padding: 0px 6px 0px 5px;
+}
+
+/* Interactive Navigation Buttons Task*/
+.menu_link:hover {
+    border: solid 1px #f06c64;
+}
+
+.menu_link:active {
+    -webkit-transition: all 0.6s ease-out;
+    -moz-transition: all 0.6s ease-out;
+    -ms-transition: all 0.6s ease-out;
+    -o-transition: all 0.6s ease-out;
+    transition: all 0.6s ease-out;
+    -webkit-transform: rotateX(360deg);
+    -moz-transform: rotateX(360deg);
+    -ms-transform: rotateX(180deg);
+    -o-transform: rotateX(360deg);
+    transform: rotateX(360deg);
 }
 
 .portfolio-images {
     display: grid;
-    margin-top: 19px;
+    margin-top: 18px;
     grid-template-columns: repeat(4, 220px);
     grid-template-rows: 187px;
     grid-gap: 20px;
@@ -170,6 +186,15 @@ article {
 .portfolio_item .portfolio_img-12 {
     background-image: url(./assets/img/portfolio/Project-120.png);
     background-position: -36px -60px;
+}
+
+.portfolio_item .portfolio_img_size:hover {
+    -webkit-transition: all 1s ease-out;
+    -moz-transition: all 1s ease-out;
+    -ms-transition: all 1s ease-out;
+    -o-transition: all 1s ease-out;
+    transition: all 1s ease-out;
+    background-position: 0px 0px;
 }
 
 .portfolio_line {
@@ -274,6 +299,23 @@ article {
     border-radius: 50%;
     -ms-border-radius: 50%;
     -o-border-radius: 50%;
+    -webkit-transition: all 0.3s ease-out;
+    -moz-transition: all 0.3s ease-out;
+    -ms-transition: all 0.3s ease-out;
+    -o-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+}
+/*Interactive ICO Social Task*/
+.ico-social_circle:hover {
+    border-color: #f06c64;
+}
+
+.ico-social_circle:active {
+    -webkit-transform: rotateY(360deg);
+    -moz-transform: rotateY(360deg);
+    -ms-transform: rotateY(180deg);
+    -o-transform: rotateY(360deg);
+    transform: rotateY(360deg);
 }
 
 .ico_social_img-1{
