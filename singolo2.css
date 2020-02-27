@@ -94,7 +94,7 @@ article {
     grid-gap: 20px;
 }
  
-/*Hide elements > 12*/
+/*Hide elements > 12 HTML STR 62*/
 .portfolio-images :nth-child(n+13) {
     display: none;
 }
@@ -239,11 +239,11 @@ article {
     font-family: Lato;
     font-size: 15.1pt;
     font-weight: 900;
-    /* font-stretch: normal; */
-    /* font-style: normal; */
     line-height: 10pt;
     letter-spacing: -0.9pt;
     color: #666d89;
+    /*Very Long Name Task HTML STR 82*/
+    white-space: nowrap;
 }
 
 .photo p {
@@ -251,7 +251,6 @@ article {
     margin-top: -9px;
     font-size: 12px;
     font-weight: 400;
-    /* font-stretch: condensed; */
     font-style: normal;
     line-height: 16pt;
     letter-spacing: -0.05pt;
