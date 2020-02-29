@@ -1,0 +1,31 @@
+body {
+    max-width: 1020px;
+    margin: 0 auto;
+    font-family: 'Lato', Verdana, sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+h2 {
+    margin-top: 0px;
+}
+
+article {
+    margin-bottom: 0px;
+}
+
+.padding-site {
+    padding: 0px 40px 0px 40px;
+}
+.line {
+    height: 6px;
+}
+
+.link {
+    display: block;
+    height: 100%;
+    text-align: center;
+}
