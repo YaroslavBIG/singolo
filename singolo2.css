@@ -85,7 +85,7 @@ article {
 
 /* Interactive Navigation Buttons Task*/
 .menu_link:hover {
-    border: solid 1px #f06c64;
+    border: solid 1px #f2f2f2;
 }
 
 .menu_link:active {
@@ -188,6 +188,7 @@ article {
     background-position: -36px -60px;
 }
 
+.portfolio_item .portfolio_img_size:hover:not(:nth-child(1)),
 .portfolio_item .portfolio_img_size:hover:not(:nth-child(10)) {
     -webkit-transition: all 1s ease-out;
     -moz-transition: all 1s ease-out;
@@ -206,6 +207,15 @@ article {
     background-position: -186px -322px;
 }
 
+.portfolio-images .portfolio_item .portfolio_img-1:hover {
+    -webkit-transition: all 3s ease-out;
+    -moz-transition: all 3s ease-out;
+    -ms-transition: all 3s ease-out;
+    -o-transition: all 3s ease-out;
+    transition: all 3s ease-out;
+    background-position: 57px -11px;
+}
+
 .portfolio_line {
     background-color: #323746;
 }
@@ -216,7 +226,7 @@ article {
 }
 
 .about-us_padding {
-padding:  0px 23px 0px 40px;
+    padding:  0px 23px 0px 40px;
 }
 
 .about-us_text {
@@ -303,11 +313,7 @@ padding:  0px 23px 0px 40px;
     height: 30px;
     margin-top: 12px;
     margin-right: 8.2px;
-    -webkit-transition: all 0.3s ease-out;
-    -moz-transition: all 0.3s ease-out;
-    -ms-transition: all 0.3s ease-out;
-    -o-transition: all 0.3s ease-out;
-    transition: all 0.3s ease-out;
+    cursor: pointer;
     border: 1px solid #666d89;
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
@@ -318,10 +324,15 @@ padding:  0px 23px 0px 40px;
 
 /*Interactive ICO Social Task*/
 .ico-social_circle:hover {
-    border-color: #f06c64;
+    border-color: #161616;
 }
 
 .ico-social_circle:active {
+    -webkit-transition: all 0.3s ease-out;
+    -moz-transition: all 0.3s ease-out;
+    -ms-transition: all 0.3s ease-out;
+    -o-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
     -webkit-transform: rotateY(360deg);
     -moz-transform: rotateY(360deg);
     -ms-transform: rotateY(180deg);
