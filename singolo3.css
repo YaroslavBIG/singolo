@@ -29,3 +29,74 @@ article {
     height: 100%;
     text-align: center;
 }
+
+
+
+
+
+
+
+.footer_ico-social {
+    display: inline-flex;
+}
+
+.ico-social_circle {
+    display: flex;
+    width: 30px;
+    height: 30px;
+    margin-top: 12px;
+    margin-right: 8.2px;
+    cursor: pointer;
+    border: 1px solid #666d89;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+
+/*Interactive ICO Social Task*/
+.ico-social_circle:hover {
+    border-color: #161616;
+}
+
+.ico-social_circle:active {
+    -webkit-transition: all 0.3s ease-out;
+    -moz-transition: all 0.3s ease-out;
+    -ms-transition: all 0.3s ease-out;
+    -o-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+    -webkit-transform: rotateY(360deg);
+    -moz-transform: rotateY(360deg);
+    -ms-transform: rotateY(180deg);
+    -o-transform: rotateY(360deg);
+    transform: rotateY(360deg);
+}
+
+.ico_social_img-1 {
+    width: 8px;
+    height: 14px;
+    margin: auto;
+    background-image: url(./assets/img/about/facebook.png);
+}
+
+.ico_social_img-2 {
+    width: 14px;
+    height: 14px;
+    margin: auto;
+    background-image: url(./assets/img/about/google.png);
+}
+
+.ico_social_img-3 {
+    width: 14px;
+    height: 12px;
+    margin: auto;
+    background-image: url(./assets/img/about/twitter.png);
+}
+
+.ico_social_img-4 {
+    width: 14px;
+    height: 14px;
+    margin: auto;
+    background-image: url(./assets/img/about/linkedin.png);
+}

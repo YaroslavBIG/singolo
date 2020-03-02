@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="./singolo3.css">
+    <link rel="stylesheet" type="text/css" href="./singolo1_font.css">
     <title>Document</title>
 </head>
 <body>
@@ -14,10 +16,11 @@
             </div>
             <div class="quote_form">
                 <form action="#" >
-                    <input type="text" value="Name (Required)" name="name">
-                    <input type="text" value="Email (Required)" name="email">
-                    <input type="text" value="Subject" name="subject">
-                    <textarea name="" id="detail" cols="30" rows="10">Describe your project in detail...</textarea>
+                    <input type="text" name="name" pattern="^[A-Za-z]{1}[a-z]{3,10}$" title="Name can contain only latin letters length: 3-10 characters" placeholder="Name (Required)" required>
+                    <input type="email" name="email" pattern="^(?!.*@.*@.*$)(?!.*@.*\-\-.*\..*$)(?!.*@.*\-\..*$)(?!.*@.*\-$)(.*@.+(\..{1,11})?)$" title="Enter a valid email" placeholder="Email (Required)" required>
+                    <input type="text" name="subject" placeholder="Subject">
+                    <textarea name="detail" id="detail" cols="30" rows="10">Describe your project in detail...</textarea>
+                    <button type="submit"></button>
                 </form>
             </div>
             <div class="adress">
@@ -31,5 +34,33 @@
             </div>
         </section>
     </main>
+    <footer>
+        <span>&copy;Copyright 2013</span>
+        <span>
+            <div class="footer_ico-social">
+            <div class="ico-social_circle">
+                <div class="ico_social_img-1">
+                    <a href="#" class="ico-social link"></a>
+                </div>
+            </div>
+            <div class="ico-social_circle">
+                <div class="ico_social_img-2">
+                    <a href="#" class="ico-social link"></a>
+                </div>
+            </div>
+            <div class="ico-social_circle">
+                <div class="ico_social_img-3">
+                    <a href="#" class="ico-social link"></a>
+                </div>
+            </div>
+            <div class="ico-social_circle">
+                <div class="ico_social_img-4">
+                    <a href="#" class="ico-social link"></a>
+                </div>
+            </div>
+        </div>
+        </div>
+    </span>
+    </footer>
 </body>
 </html>
