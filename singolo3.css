@@ -31,7 +31,7 @@ article {
 }
 
 .quote {
-
+    background-color: #f06c64;
 }
 
 .quote__text {
@@ -50,7 +50,16 @@ article {
 
 }
 
-
+.quote button {
+    border: solid 1px #666d89;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    background-color: lightcoral;
+    color: #767e9e;
+}
 
 .adress {
 
@@ -72,7 +81,15 @@ article {
 
 }
 
-.footer_ico-social {
+.quote .line {
+    background-color: #ea676b;
+}
+
+footer {
+    background-color: #2d303a;
+}
+
+.footer__ico-social {
     display: inline-flex;
 }
 
