@@ -55,7 +55,7 @@ p {
     padding: 0px 40px 0px 40px;
 }
 
-header .wraper {
+header .wrapper {
     display: flex;
     justify-content: space-between;
     background-color: #2d303a;
@@ -234,7 +234,7 @@ header .line {
     transform: rotate(90deg);
 }
 
-.wraper .line {
+.wrapper .line {
     background-color: #ea676b;
 }
 
@@ -243,7 +243,7 @@ header .line {
     background-color: #f2f2f2;
 }
 
-.services-our h1 {
+.services-our h2 {
     margin-top: 0px;
     padding-top: 69px;
     text-align: justify;
@@ -256,7 +256,7 @@ header .line {
 }
 
 .services-our p {
-    margin-top: -4px;
+    margin-top: 26px;
     /*Overflow text task*/
     max-height: calc(30.24px*2);
     overflow: hidden;
@@ -818,7 +818,7 @@ header .line {
 
 .quote button {
     margin-top: 16px;
-    color: #767e9e;
+    color: #666d89;
     border: solid 1px #666d89;
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
