@@ -386,8 +386,6 @@ header .line {
     background-color: #fff;
 }
 
-/*------------------------------------------*/
-
 .portfolio {
     min-height: 863px;
     padding: 0px 30px 0px 40px;
@@ -438,7 +436,7 @@ header .line {
     line-height: 15pt;
 }
 
-/* Interactive Navigation Buttons Task*/
+/* Interactive Navigation Buttons Task */
 .menu_link:hover {
     border: solid 1px #f2f2f2;
 }
@@ -464,7 +462,7 @@ header .line {
     grid-gap: 20px;
 }
 
-/*Hide elements > 12 HTML STR 62*/
+/* Hide elements Portfolio */
 .portfolio-images :nth-child(n+13) {
     display: none;
 }
@@ -640,7 +638,7 @@ header .line {
 
 .photo h3 {
     margin: 17px 0px 19px -1px;
-    /*Very Long Name Task HTML STR 82*/
+    /* Very Long Name Task */
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -742,9 +740,6 @@ header .line {
 .about-us_line {
     background-color: #ffffff;
 }
-
-/*----------------------------------*/
-
 
 .quote {
     padding-top: 60px;
