@@ -1,7 +1,7 @@
 body {
     width: 1020px;
     margin: 0 auto;
-    font-family: 'Lato', Verdana, sans-serif;
+    font-family: "Lato", Verdana, sans-serif;
 }
 
 a {
@@ -72,7 +72,7 @@ header .wrapper {
     letter-spacing: -1.1px;
     text-transform: uppercase;
     color: #ffffff;
-    font-family: 'Lato', Verdana, sans-serif;
+    font-family: "Lato", Verdana, sans-serif;
     font-size: 26px;
     font-weight: 700;
 }
@@ -114,7 +114,7 @@ header .wrapper {
     letter-spacing: -0.3px;
     text-transform: uppercase;
     color: #ffffff;
-    font-family: 'Lato', Verdana, sans-serif;
+    font-family: "Lato", Verdana, sans-serif;
     font-size: 12px;
     font-weight: 700;
     line-height: 5.5;
@@ -126,7 +126,7 @@ header .wrapper {
     left: -12px;
     content: ".";
     color: #494e62;
-    font-family: 'Lato', Verdana, sans-serif;
+    font-family: "Lato", Verdana, sans-serif;
     font-size: 19px;
     font-weight: 900;
 }
@@ -249,7 +249,7 @@ header .line {
     text-align: justify;
     letter-spacing: 0.04px;
     color: #666d89;
-    font-family: 'Lato', Verdana, sans-serif;
+    font-family: "Lato", Verdana, sans-serif;
     font-size: 29.5px;
     font-weight: 900;
     line-height: 0.62;
@@ -263,7 +263,7 @@ header .line {
     /*----*/
     text-align: justify;
     color: #767e9e;
-    font-family: 'Lato', Verdana, sans-serif;
+    font-family: "Lato", Verdana, sans-serif;
     font-size: 18px;
     font-weight: 300;
     line-height: 1.68;
@@ -272,7 +272,7 @@ header .line {
 .services_item h2 {
     text-align: justify;
     color: #666d89;
-    font-family: 'Lato', Verdana, sans-serif;
+    font-family: "Lato", Verdana, sans-serif;
     font-size: 18px;
     font-weight: 900;
     overflow: hidden;
@@ -287,7 +287,7 @@ header .line {
     overflow: hidden;
     text-overflow: ellipsis;
     color: #767e9e;
-    font-family: 'Lato', Verdana, sans-serif;
+    font-family: "Lato", Verdana, sans-serif;
     font-size: 12px;
     font-weight: 400;
     line-height: 21px;
@@ -396,7 +396,7 @@ header .line {
     text-align: justify;
     letter-spacing: -0.15pt;
     color: #666d89;
-    font-family: 'Lato', Verdana, sans-serif;
+    font-family: "Lato", Verdana, sans-serif;
     font-size: 30px;
     font-weight: 900;
     line-height: 5.15;
@@ -406,7 +406,7 @@ header .line {
     margin-top: -41px;
     text-align: justify;
     color: #767e9e;
-    font-family: 'Lato', Verdana, sans-serif;
+    font-family: "Lato", Verdana, sans-serif;
     font-size: 18px;
     font-weight: 300;
     line-height: 1.68;
@@ -420,18 +420,18 @@ header .line {
     display: flex;
     margin-top: -7px;
     margin-left: -38px;
+    list-style-type: none;
 }
 
 .menu_link {
     margin-right: 10px;
     padding: 0px 7px 0px 5px;
-    list-style: none;
     cursor: pointer;
     letter-spacing: -0.03pt;
     color: #767e9e;
     border: solid 1px #666d89;
     border-radius: 5px;
-    font-family: 'Lato', Verdana, sans-serif;
+    font-family: "Lato", Verdana, sans-serif;
     font-size: 12px;    
     line-height: 15pt;
 }
@@ -591,7 +591,7 @@ header .line {
     text-align: justify;
     letter-spacing: -0.1pt;
     color: #666d89;
-    font-family: 'Lato', Verdana, sans-serif;
+    font-family: "Lato", Verdana, sans-serif;
     font-size: 30px;
     font-weight: 900;
 }
@@ -602,7 +602,7 @@ header .line {
     text-align: justify;
     letter-spacing: 0.31pt;
     color: #767e9e;
-    font-family: 'Lato', Verdana, sans-serif;
+    font-family: "Lato", Verdana, sans-serif;
     font-size: 17px;
     font-weight: 300;
     overflow: hidden;
@@ -644,7 +644,7 @@ header .line {
     text-overflow: ellipsis;
     letter-spacing: -0.1pt;
     color: #666d89;
-    font-family: 'Lato', Verdana, sans-serif;
+    font-family: "Lato", Verdana, sans-serif;
     font-size: 18px;
     font-weight: 900;
     line-height: 1;
@@ -654,7 +654,7 @@ header .line {
     margin-top: -9px;
     text-align: justify;
     color: #767e9e;
-    font-family: 'Lato', Verdana, sans-serif;
+    font-family: "Lato", Verdana, sans-serif;
     font-size: 12px;
     font-weight: 400;
     font-style: normal;
@@ -751,7 +751,7 @@ header .line {
 
 .quote__text h2 {
     letter-spacing: 0.1pt;
-    font-family: 'Lato', Verdana, sans-serif;
+    font-family: "Lato", Verdana, sans-serif;
     font-size: 29.5px;
     font-weight: 900;
 }
@@ -760,7 +760,7 @@ header .line {
     margin-top: 18px;
     padding-right: 16px;
     text-align: justify;
-    font-family: 'Lato', Verdana, sans-serif;
+    font-family: "Lato", Verdana, sans-serif;
     font-size: 18px;
     font-weight: 300;
     line-height: 23pt;
@@ -793,7 +793,7 @@ header .line {
     text-align: justify;
     letter-spacing: -0.05px;
     color: #f48c8f;
-    font-family: 'Lato', Verdana, sans-serif;
+    font-family: "Lato", Verdana, sans-serif;
     font-size: 12px;
     font-weight: 400;
     font-style: normal;
@@ -831,7 +831,7 @@ header .line {
 .adress h3 {
     margin-top: -1px;
     letter-spacing: -0.45pt;
-    font-family: 'Lato', Verdana, sans-serif;
+    font-family: "Lato", Verdana, sans-serif;
     font-size: 19px;
     font-weight: 900;
     line-height: 1;
@@ -841,7 +841,7 @@ header .line {
     margin-top: 10px;
     text-align: justify;
     letter-spacing: -0.03px;
-    font-family: 'Lato', Verdana, sans-serif;
+    font-family: "Lato", Verdana, sans-serif;
     font-size: 12px;
     font-weight: 400;
     font-style: normal;
@@ -851,7 +851,7 @@ header .line {
 .contacts {
     margin-top: 21px;
     text-align: justify;
-    font-family: 'Lato', Verdana, sans-serif;
+    font-family: "Lato", Verdana, sans-serif;
     font-size: 12px;
     font-weight: 400;
     font-style: normal;
@@ -892,7 +892,7 @@ header .line {
     padding-left: 42px;
     letter-spacing: -0.15px;
     background-color: #2d303a;
-    font-family: 'Lato', Verdana, sans-serif;
+    font-family: "Lato", Verdana, sans-serif;
     font-size: 12px;
     font-weight: 400;
     font-style: normal;
