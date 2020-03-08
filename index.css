@@ -866,6 +866,11 @@ header .line {
     line-height: 20px;
 }
 
+.contacts  a.ico__contacts.ico_mail {
+    position: relative;
+    top: 1px;
+}
+
 .ico_loc::before {
     margin-right: 13px;
     margin-left: 3px;
@@ -881,10 +886,11 @@ header .line {
 }
 
 .ico_mail::before {
+    position: relative;
+    top: 1px;
     margin-right: 10px;
     margin-left: 0px;
     content: url(./assets/img/contacts/mail.png);
-    vertical-align: text-top;
 }
 
 
