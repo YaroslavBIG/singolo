@@ -14,15 +14,17 @@ MENU_PORTFOLIO.addEventListener('click', (event) => {
 
 
 
-const IPHONE_H = document.getElementById('base_horisontal');
-const base_horisontal = document.querySelector("#base_horisontal > img");
-IPHONE_H.addEventListener('click', (event) => {
-    base_horisontal.classList.contains('base-background_hover') ? event.target.classList.remove('base-background_hover') : event.target.classList.add('base-background_hover');
+
+const getElById = (el) => document.getElementById(el);
+const getQuerySelector = (el) => document.querySelector(el);
+const eventRemove = (el) => event.target.classList.remove(el);
+const eventAdd  = (el) => event.target.classList.add(el);
+const displayHidden = 'base-background_hover';
+
+getElById('base_horisontal').addEventListener('click', (event) => {
+    getQuerySelector('#base_horisontal > img').classList.contains(displayHidden) ? eventRemove(displayHidden) : eventAdd(displayHidden);
 });
 
-
-const IPHONE_V = document.getElementById('base_vertical');
-const base_vertical = document.querySelector("#base_vertical > img");
-IPHONE_V.addEventListener('click', (event) => {
-    base_vertical.classList.contains('base-background_hover') ? event.target.classList.remove('base-background_hover') : event.target.classList.add('base-background_hover');
+getElById('base_vertical').addEventListener('click', (event) => {
+    getQuerySelector('#base_vertical > img').classList.contains(displayHidden) ? eventRemove(displayHidden) : eventAdd(displayHidden);
 });
