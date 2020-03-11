@@ -209,16 +209,18 @@ header .line {
     transform: rotate(-90deg);
 }
 
-.base-background_hover:hover {
+.base-background_hover {
     filter: opacity(0%);
     -webkit-filter: opacity(0%);
 }
 
 .shadow_vertical {
+    position: absolute;
     z-index: 1;
 }
 
 .shadow_horisontal {
+    position: absolute;
     z-index: 1;
     top: -29px;
     -webkit-transform: rotateX(180deg);
@@ -780,6 +782,7 @@ header .line {
 
 #quote {
     display: grid;
+    scroll-margin: 190px;
 }
 
 #quote input {
