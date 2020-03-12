@@ -239,6 +239,111 @@ header .line {
 .wrapper .line {
     background-color: #ea676b;
 }
+/*---------------------*/
+.slider-next {
+    position: relative;
+    height: 594px;
+    background-color: #648bf0;
+}
+
+.slider-next__button {
+    position: absolute;
+}
+
+.slider-next__button a img {
+    -webkit-transition: all 1s ease-out;
+    -moz-transition: all 1s ease-out;
+    -ms-transition: all 1s ease-out;
+    -o-transition: all 1s ease-out;
+    transition: all 1s ease-out;
+}
+
+.slider-next__button:hover {
+    filter: opacity(25%);
+    -webkit-filter: opacity(25%);
+}
+
+.left-next {
+    top: 281px;
+    left: 42px;
+}
+
+.right-next {
+    top: 277px;
+    left: 964px;
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    transform: rotate(180deg);
+}
+
+.slider-next__iphone {
+    position: absolute;
+}
+
+.vertical-next {
+    top: 53px;
+    left: 382px;
+}
+
+.iphone-next {
+    position: relative;
+}
+
+.base-next {
+    position: absolute;
+    z-index: 2;
+}
+
+.background_vertical-next {
+    z-index: 3;
+    top: 69px;
+    left: 14px;
+}
+
+.base-next-background_hover {
+    filter: opacity(0%);
+    -webkit-filter: opacity(0%);
+}
+
+.shadow_vertical-next {
+    position: absolute;
+    z-index: 1;
+}
+
+.small-left {
+    top: 163px;
+    left: 248px;
+    opacity: 0.33;
+}
+
+.background__small_left {
+    z-index: 3;
+    top: 42px;
+    left: 9px;
+}
+
+.small-right {
+    top: 163px;
+    left: 611px;
+    opacity: 0.33;
+}
+
+.background__small_right {
+    z-index: 3;
+    top: 42px;
+    left: 9px;
+}
+
+.wrapper-next .line {
+    background-color: hsl(223, 64%, 60%);
+}
+
+.hidden {
+    display: none;
+}
+/*--------------------*/
 
 .services {
     min-height: 494px;
