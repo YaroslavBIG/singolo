@@ -28,3 +28,16 @@ getElById('base_horisontal').addEventListener('click', (event) => {
 getElById('base_vertical').addEventListener('click', (event) => {
     getQuerySelector('#base_vertical > img').classList.contains(displayHidden) ? eventRemove(displayHidden) : eventAdd(displayHidden);
 });
+
+getElById('base_vertical_next').addEventListener('click', (event) => {
+    getQuerySelector('#base_vertical_next > img').classList.contains(displayHidden) ? eventRemove(displayHidden) : eventAdd(displayHidden);
+});
+
+getElById('base__small_left').addEventListener('click', (event) => {
+    getQuerySelector('#base__small_left > img').classList.contains(displayHidden) ? eventRemove(displayHidden) : eventAdd(displayHidden);
+});
+
+getElById('base__small_right').addEventListener('click', (event) => {
+    getQuerySelector('#base__small_right > img').classList.contains(displayHidden) ? eventRemove(displayHidden) : eventAdd(displayHidden);
+});
+
