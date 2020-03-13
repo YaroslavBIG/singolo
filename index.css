@@ -149,6 +149,7 @@ header .line {
 .slider__button {
     position: absolute;
     z-index: 9;
+    opacity: 0.8;
 }
 
 
