@@ -62,3 +62,44 @@ getElById('button_right').addEventListener('click', (event) => {
     //  getElById('slider').style.left = `${count}px`
     //}
 });  
+// Portfolio
+
+const portfolio = document.querySelectorAll('.portfolio_img_size')
+
+function randomInteger(min, max) {
+    // случайное число от min до (max+1)
+    let rand = min + Math.random() * (max + 1 - min);
+    return Math.floor(rand);
+  }
+
+for(const el of portfolio) {
+    const classLst = el.classList
+    for (let count = 1; count < 12; count += 1) {
+        const cls = `portfolio_img-${count}`
+        if(classLst.contains(cls)) {
+            classLst.remove(cls)
+        }
+    }
+}
+
+for(let counter = 0; counter < portfolio.length; counter += 1) {
+
+    const classLst = portfolio[counter].classList
+    const arrImg = []
+    for (let count = 1; count <= 12; count += 1) {
+        if(counter === 0) {classLst.add(`portfolio_img-1`)}
+        const cls = `portfolio_img-${counter}`
+        const clsRandom = `portfolio_img-${randomInteger(1, 12)}`;
+        
+        classLst.add(cls)
+       /* if (!classLst.contains(cls) && !arrImg.includes(clsRandom)) {
+            console.log(cls)
+            arrImg.push(clsRandom)
+            classLst.add(cls)
+        } else { 
+            count -= 1;
+            console.log(arrImg)
+        }*/
+     
+    }
+}
