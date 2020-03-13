@@ -158,7 +158,7 @@ header .line {
 }
 
 .wrapper_hidden {
-    height: inherit;
+    height: 588px;
 }
 
 .left {
@@ -246,7 +246,7 @@ header .line {
 /*---------------------*/
 .slider-next {
     position: relative;
-    height: 594px;
+    height: 588px;
     background-color: #648bf0;
 }
 
