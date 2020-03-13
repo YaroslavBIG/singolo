@@ -30,11 +30,13 @@
         <div class="line"></div>
     </header>
     <main>
-        <div class="wrapper hidden">
-            <div class="slider padding-site">
-                <div class="slider__button left">
-                    <a href="#"><img src="./assets/img/slider/arrow.svg" alt="slider__button_left"></a>
-                </div>
+        <div class="wrapper">
+            <div class="slider__button left">
+                <a name="button_left" id="button_left"><img src="./assets/img/slider/arrow.svg"
+                        alt="slider__button_left"></a>
+            </div>
+            <div class="slider padding-site" id="slider">
+                <div class="wrapper_hidden">
                 <div class="slider__iphone vertical">
                     <div class="iphone">
                         <div class="base background_vertical" id='base_vertical'>
@@ -61,17 +63,19 @@
                         </div>
                     </div>
                 </div>
-                <div class="slider__button right">
-                    <a href="#"><img src="./assets/img/slider/arrow.svg" alt="slider__button_right"></a>
-                </div>
             </div>
             <div class="line"></div>
         </div>
-        <div class="wrapper-next">
+
+
+        <div class="slider__button right">
+            <a name="button_right" id="button_right"><img src="./assets/img/slider/arrow.svg"
+                    alt="slider__button_right"></a>
+        </div>
+
+        </div>
+        <div class="wrapper-next hidden" id="slider_next">
             <div class="slider-next padding-site">
-                <div class="slider-next__button left">
-                    <a href="#"><img src="./assets/img/slider/arrow.svg" alt="slider-next__button_left"></a>
-                </div>
                 <div class="slider-next__iphone vertical-next">
                     <div class="iphone-next">
                         <div class="base-next background_vertical-next" id='base_vertical_next'>
@@ -117,9 +121,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="slider__button right">
-                    <a href="#"><img src="./assets/img/slider/arrow.svg" alt="slider__button_right"></a>
-                </div>
+
             </div>
             <div class="line"></div>
         </div>
@@ -267,9 +269,9 @@
                 <div class="photo">
                     <div class="photo_img photo_img-1"></div>
                     <h3>Adam Jensen</h3>
-<!--white-space: pre; CSS STR 666-->
+                    <!--white-space: pre; CSS STR 666-->
                     <p>Quisque luctus, quam eget molestie commodo, lacus purus
-cursus purus, nec rutrum tellus dolor id lorem.</p>
+                        cursus purus, nec rutrum tellus dolor id lorem.</p>
                     <div class="photo_ico-social">
                         <div class="ico-social_circle">
                             <div class="ico_social_img-1">

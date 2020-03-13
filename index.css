@@ -4,6 +4,10 @@ body {
     font-family: "Lato", Verdana, sans-serif;
 }
 
+main {
+    overflow: hidden;
+}
+
 a {
     text-decoration: none;
     color: inherit;
@@ -144,29 +148,27 @@ header .line {
 
 .slider__button {
     position: absolute;
+    z-index: 9;
 }
 
-.slider__button a img {
-    -webkit-transition: all 1s ease-out;
-    -moz-transition: all 1s ease-out;
-    -ms-transition: all 1s ease-out;
-    -o-transition: all 1s ease-out;
-    transition: all 1s ease-out;
-}
 
 .slider__button:hover {
     filter: opacity(25%);
     -webkit-filter: opacity(25%);
 }
 
+.wrapper_hidden {
+    height: inherit;
+}
+
 .left {
-    top: 281px;
-    left: 42px;
+    top: 376px;
+    left: 207px;
 }
 
 .right {
-    top: 277px;
-    left: 964px;
+    top: 373px;
+    left: 1129px;
     -webkit-transform: rotate(180deg);
     -moz-transform: rotate(180deg);
     -ms-transform: rotate(180deg);
@@ -238,6 +240,8 @@ header .line {
 
 .wrapper .line {
     background-color: #ea676b;
+    width: 1020px;
+    margin-left: -40px;
 }
 /*---------------------*/
 .slider-next {
