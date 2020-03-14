@@ -82,17 +82,38 @@ for(const el of portfolio) {
     }
 }
 
-for(let counter = 0; counter < portfolio.length; counter += 1) {
+/*const classPortfolioRandom = () {
+    const valueArr = [];
+    let classNum = randomInteger(1, 12)
+        if(valueArr.includes(classNum)) {
+            classNum = randomInteger(1, 12)
+        } else {
 
-    const classLst = portfolio[counter].classList
-    const arrImg = []
-    for (let count = 1; count <= 12; count += 1) {
-        if(counter === 0) {classLst.add(`portfolio_img-1`)}
-        const cls = `portfolio_img-${counter}`
+        }      
         const clsRandom = `portfolio_img-${randomInteger(1, 12)}`;
         
         classLst.add(cls)
-       /* if (!classLst.contains(cls) && !arrImg.includes(clsRandom)) {
+}
+*/
+const arrImg = [];
+for(let count = 0; count < portfolio.length; count += 1) {
+    let elem = portfolio[count];
+    const classLst = elem.classList;
+    
+    console.log(arrImg);
+    let value = randomInteger(1, 12);
+
+        console.log(value);
+        if(arrImg.includes(value)) {
+            value = randomInteger(1, 12);
+            console.log('IF1')
+            //count -= 1;
+        } else {
+            classLst.add(`portfolio_img-${value}`);
+            arrImg.push(value);
+            console.log('if2');
+        }
+           /* if (!classLst.contains(cls) && !arrImg.includes(clsRandom)) {
             console.log(cls)
             arrImg.push(clsRandom)
             classLst.add(cls)
@@ -101,5 +122,5 @@ for(let counter = 0; counter < portfolio.length; counter += 1) {
             console.log(arrImg)
         }*/
      
-    }
+    
 }
