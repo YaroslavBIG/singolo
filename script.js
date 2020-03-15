@@ -64,6 +64,15 @@ getElById('button_right').addEventListener('click', (event) => {
 });  
 // Portfolio
 
+/*MENU_PORTFOLIO.addEventListener('click', (event) => {
+    getQuerySelector('#portfolio_images > div').classList.contains(displayHidden) ? eventRemove(displayHidden) : eventAdd(displayHidden);
+});*/
+
+MENU_PORTFOLIO.addEventListener('click', (event) => {
+    portfolio.querySelectorAll('div').forEach(el => el.classList.remove('portfolio_img_size'))
+    event.target.classList.add('porfolio__menu_active');
+});
+
 const portfolio = document.querySelectorAll('.portfolio_img_size')
 
 function randomInteger(min, max) {
@@ -106,12 +115,12 @@ for(let count = 0; count < portfolio.length; count += 1) {
         console.log(value);
         if(arrImg.includes(value)) {
             value = randomInteger(1, 12);
-            console.log('IF1')
+            //console.log('IF1')
             //count -= 1;
         } else {
             classLst.add(`portfolio_img-${value}`);
             arrImg.push(value);
-            console.log('if2');
+           // console.log('if2');
         }
            /* if (!classLst.contains(cls) && !arrImg.includes(clsRandom)) {
             console.log(cls)

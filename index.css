@@ -140,6 +140,10 @@ header .line {
     background-color: #323746;
 }
 
+main .wrapper {
+    position: relative;
+}
+
 .slider {
     position: relative;
     height: 594px;
@@ -163,13 +167,13 @@ header .line {
 }
 
 .left {
-    top: 376px;
-    left: 164px;
+    top: 281px;
+    left: 42px;
 }
 
 .right {
-    top: 373px;
-    left: 1086px;
+    top: 278px;
+    left: 964px;
     -webkit-transform: rotate(180deg);
     -moz-transform: rotate(180deg);
     -ms-transform: rotate(180deg);
