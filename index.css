@@ -585,6 +585,8 @@ main .wrapper {
     border: solid 1px #666d89;
 }
 
+/* portfolio */
+
 .porfolio__menu_active {
     color: #f06c64;
     border-color: #f06c64;
@@ -598,7 +600,7 @@ main .wrapper {
     grid-gap: 20px;
 }
 
-/* Hide elements Portfolio */
+
 .portfolio-images :nth-child(n+13) {
     display: none;
 }
@@ -697,12 +699,16 @@ main .wrapper {
 }
 
 .portfolio-images .portfolio_item .portfolio_img-1:hover {
-    -webkit-transition: all 3s ease-out;
-    -moz-transition: all 3s ease-out;
-    -ms-transition: all 3s ease-out;
-    -o-transition: all 3s ease-out;
-    transition: all 3s ease-out;
+    -webkit-transition: all 1s ease-out;
+    -moz-transition: all 1s ease-out;
+    -ms-transition: all 1s ease-out;
+    -o-transition: all 1s ease-out;
+    transition: all 1s ease-out;
     background-position: 57px -11px;
+}
+
+.portfolio_border {
+    border: 5px solid #F06C64;
 }
 
 .portfolio_line {

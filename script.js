@@ -71,10 +71,11 @@ function randomInteger(min, max) {
   }
 
 const portfolio = document.querySelectorAll('#portfolio_images > div > div')
+const portfolioElQuant = portfolio.length
 
 MENU_PORTFOLIO.addEventListener('click', (event) => {
     for(const el of portfolio) {
-        for(let count = 1; count <= 12; count += 1) {
+        for(let count = 1; count <= portfolioElQuant; count += 1) {
             const classLst = el.classList;
             const cls = `portfolio_img-${count}`;
             classLst.remove(cls);
@@ -82,7 +83,7 @@ MENU_PORTFOLIO.addEventListener('click', (event) => {
     };
 //all selector
     if(event.target.classList.contains('all')) {
-        for(let count = 1; count <= 12; count += 1) {
+        for(let count = 1; count <= portfolioElQuant; count += 1) {
             const classLst = document.querySelector(`#portfolio_images > div:nth-child(${count}) > div`).classList
             const cls = `portfolio_img-${count}`
             classLst.add(cls)
@@ -91,7 +92,7 @@ MENU_PORTFOLIO.addEventListener('click', (event) => {
         let arrImg = [];
         for(const el of portfolio) {
             const classLst = el.classList
-            for (let count = 1; count <= 12; count += 1) {
+            for (let count = 1; count <= portfolioElQuant; count += 1) {
                 const cls = `portfolio_img-${count}`
                 if(classLst.contains(cls)) {
                     classLst.remove(cls)
@@ -99,13 +100,13 @@ MENU_PORTFOLIO.addEventListener('click', (event) => {
             }
         }
         
-        for(let count = 0; count <= 12; count += 1) {
+        for(let count = 0; count < portfolioElQuant; count += 1) {
         
         let elem = portfolio[count];
         const classLst = elem.classList;
-        let value = randomInteger(1, 12);
+        let value = randomInteger(1, portfolioElQuant);
         if(arrImg.includes(value)) {
-            value = randomInteger(1, 11);
+            value = randomInteger(1, portfolioElQuant);
         } else {
             classLst.add(`portfolio_img-${value}`);
             arrImg.push(value);
@@ -116,3 +117,9 @@ MENU_PORTFOLIO.addEventListener('click', (event) => {
 }
 });
 
+// border
+
+getElById('portfolio_images').addEventListener('click', (event) => {
+    portfolio.forEach(el => el.classList.remove('portfolio_border'))
+    event.target.classList.add('portfolio_border');
+});
