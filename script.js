@@ -64,72 +64,55 @@ getElById('button_right').addEventListener('click', (event) => {
 });  
 // Portfolio
 
-/*MENU_PORTFOLIO.addEventListener('click', (event) => {
-    getQuerySelector('#portfolio_images > div').classList.contains(displayHidden) ? eventRemove(displayHidden) : eventAdd(displayHidden);
-});*/
-
-MENU_PORTFOLIO.addEventListener('click', (event) => {
-    portfolio.querySelectorAll('div').forEach(el => el.classList.remove('portfolio_img_size'))
-    event.target.classList.add('porfolio__menu_active');
-});
-
-const portfolio = document.querySelectorAll('.portfolio_img_size')
-
 function randomInteger(min, max) {
     // случайное число от min до (max+1)
     let rand = min + Math.random() * (max + 1 - min);
     return Math.floor(rand);
   }
 
-for(const el of portfolio) {
-    const classLst = el.classList
-    for (let count = 1; count < 12; count += 1) {
-        const cls = `portfolio_img-${count}`
-        if(classLst.contains(cls)) {
-            classLst.remove(cls)
+const portfolio = document.querySelectorAll('#portfolio_images > div > div')
+
+MENU_PORTFOLIO.addEventListener('click', (event) => {
+    for(const el of portfolio) {
+        for(let count = 1; count <= 12; count += 1) {
+            const classLst = el.classList;
+            const cls = `portfolio_img-${count}`;
+            classLst.remove(cls);
         }
-    }
-}
-
-/*const classPortfolioRandom = () {
-    const valueArr = [];
-    let classNum = randomInteger(1, 12)
-        if(valueArr.includes(classNum)) {
-            classNum = randomInteger(1, 12)
-        } else {
-
-        }      
-        const clsRandom = `portfolio_img-${randomInteger(1, 12)}`;
+    };
+//all selector
+    if(event.target.classList.contains('all')) {
+        for(let count = 1; count <= 12; count += 1) {
+            const classLst = document.querySelector(`#portfolio_images > div:nth-child(${count}) > div`).classList
+            const cls = `portfolio_img-${count}`
+            classLst.add(cls)
+            }
+        } else { //otherCat
+        let arrImg = [];
+        for(const el of portfolio) {
+            const classLst = el.classList
+            for (let count = 1; count <= 12; count += 1) {
+                const cls = `portfolio_img-${count}`
+                if(classLst.contains(cls)) {
+                    classLst.remove(cls)
+                }
+            }
+        }
         
-        classLst.add(cls)
-}
-*/
-const arrImg = [];
-for(let count = 0; count < portfolio.length; count += 1) {
-    let elem = portfolio[count];
-    const classLst = elem.classList;
-    
-    console.log(arrImg);
-    let value = randomInteger(1, 12);
-
-        console.log(value);
+        for(let count = 0; count <= 12; count += 1) {
+        
+        let elem = portfolio[count];
+        const classLst = elem.classList;
+        let value = randomInteger(1, 12);
         if(arrImg.includes(value)) {
-            value = randomInteger(1, 12);
-            //console.log('IF1')
-            //count -= 1;
+            value = randomInteger(1, 11);
         } else {
             classLst.add(`portfolio_img-${value}`);
             arrImg.push(value);
-           // console.log('if2');
         }
-           /* if (!classLst.contains(cls) && !arrImg.includes(clsRandom)) {
-            console.log(cls)
-            arrImg.push(clsRandom)
-            classLst.add(cls)
-        } else { 
-            count -= 1;
-            console.log(arrImg)
-        }*/
-     
+    }
     
+
 }
+});
+

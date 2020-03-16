@@ -199,6 +199,14 @@ main .wrapper {
     z-index: 2;
 }
 
+.base img {
+    -webkit-transition: all 1s ease-out;
+    -moz-transition: all 1s ease-out;
+    -ms-transition: all 1s ease-out;
+    -o-transition: all 1s ease-out;
+    transition: all 1s ease-out;
+}
+
 .background_vertical {
     z-index: 3;
     top: 62px;
@@ -249,6 +257,10 @@ main .wrapper {
     margin-left: -40px;
 }
 /*---------------------*/
+.wrapper-next {
+    position: relative;
+}
+
 .slider-next {
     position: relative;
     height: 588px;
@@ -303,6 +315,14 @@ main .wrapper {
 .base-next {
     position: absolute;
     z-index: 2;
+}
+
+.base-next img {
+    -webkit-transition: all 1s ease-out;
+    -moz-transition: all 1s ease-out;
+    -ms-transition: all 1s ease-out;
+    -o-transition: all 1s ease-out;
+    transition: all 1s ease-out;
 }
 
 .background_vertical-next {
