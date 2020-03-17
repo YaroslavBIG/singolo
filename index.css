@@ -709,6 +709,8 @@ main .wrapper {
 
 .portfolio_border {
     border: 5px solid #F06C64;
+    width: 210px;
+    height: 177px;
 }
 
 .portfolio_line {

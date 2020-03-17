@@ -83,6 +83,7 @@ MENU_PORTFOLIO.addEventListener('click', (event) => {
     };
 //all selector
     if(event.target.classList.contains('all')) {
+        portfolio.forEach(el => el.classList.remove('portfolio_border'))
         for(let count = 1; count <= portfolioElQuant; count += 1) {
             const classLst = document.querySelector(`#portfolio_images > div:nth-child(${count}) > div`).classList
             const cls = `portfolio_img-${count}`
@@ -90,6 +91,7 @@ MENU_PORTFOLIO.addEventListener('click', (event) => {
             }
         } else { //otherCat
         let arrImg = [];
+        portfolio.forEach(el => el.classList.remove('portfolio_border'))
         for(const el of portfolio) {
             const classLst = el.classList
             for (let count = 1; count <= portfolioElQuant; count += 1) {
