@@ -1,14 +1,14 @@
-const MENU = document.getElementById('header__menu');
+const menu = document.getElementById('header__menu');
 
-MENU.addEventListener('click', (event) => {
-    MENU.querySelectorAll('a').forEach(el => el.classList.remove('header__menu_active'))
+menu.addEventListener('click', (event) => {
+    menu.querySelectorAll('a').forEach(el => el.classList.remove('header__menu_active'))
     event.target.classList.add('header__menu_active');
 });
 
-const MENU_PORTFOLIO = document.getElementById('porfolio_menu');
+const menu_portfolio = document.getElementById('porfolio_menu');
 
-MENU_PORTFOLIO.addEventListener('click', (event) => {
-    MENU_PORTFOLIO.querySelectorAll('li').forEach(el => el.classList.remove('porfolio__menu_active'))
+menu_portfolio.addEventListener('click', (event) => {
+    menu_portfolio.querySelectorAll('li').forEach(el => el.classList.remove('porfolio__menu_active'))
     event.target.classList.add('porfolio__menu_active');
 });
 
@@ -73,7 +73,7 @@ function randomInteger(min, max) {
 const portfolio = document.querySelectorAll('#portfolio_images > div > div')
 const portfolioElQuant = portfolio.length
 
-MENU_PORTFOLIO.addEventListener('click', (event) => {
+menu_portfolio.addEventListener('click', (event) => {
     for(const el of portfolio) {
         for(let count = 1; count <= portfolioElQuant; count += 1) {
             const classLst = el.classList;
