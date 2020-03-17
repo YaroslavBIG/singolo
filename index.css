@@ -1,7 +1,16 @@
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     width: 1020px;
     margin: 0 auto;
     font-family: "Lato", Verdana, sans-serif;
+}
+
+header {
+    height: 89px;
+    width: 940px;
 }
 
 main {
@@ -12,6 +21,13 @@ a {
     text-decoration: none;
     color: inherit;
 }
+
+.anchor {
+    display: block;
+    height: 80px;
+    margin-top: 80px;
+    visibility: hidden;
+  }
 
 h2,
 h3 {
@@ -63,6 +79,10 @@ header .wrapper {
     display: flex;
     justify-content: space-between;
     background-color: #2d303a;
+    position: fixed;
+    height: 89px;
+    width: 940px;
+    z-index: 99;
 }
 
 .logo {
@@ -138,6 +158,10 @@ header .wrapper {
 
 header .line {
     background-color: #323746;
+    width: 1020px;
+    position: absolute;
+    margin-left: -40px;
+    top: 83px;
 }
 
 main .wrapper {
@@ -164,6 +188,7 @@ main .wrapper {
 
 .wrapper_hidden {
     height: 588px;
+    scroll-margin-top: 80px;
 }
 
 .left {
@@ -251,7 +276,7 @@ main .wrapper {
     transform: rotate(90deg);
 }
 
-.wrapper .line {
+#home .line {
     background-color: #ea676b;
     width: 1020px;
     margin-left: -40px;
@@ -889,6 +914,10 @@ main .wrapper {
     background-color: #ffffff;
 }
 
+#contacts {
+    scroll-margin: 80px;
+}
+
 .quote {
     padding-top: 60px;
     padding-right: 23px;
@@ -924,7 +953,6 @@ main .wrapper {
 
 #quote {
     display: grid;
-    scroll-margin: 190px;
 }
 
 #quote input {
@@ -1055,6 +1083,8 @@ main .wrapper {
 
 .quote .line {
     background-color: #ea676b;
+    width: 1020px;
+    margin-left: -40px;
 }
 
 .footer__wrapper {

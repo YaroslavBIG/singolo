@@ -1,4 +1,8 @@
+//Menu
+
 const menu = document.getElementById('header__menu');
+
+document.addEventListener('scroll', onScroll);
 
 menu.addEventListener('click', (event) => {
     menu.querySelectorAll('a').forEach(el => el.classList.remove('header__menu_active'))
@@ -11,10 +15,35 @@ menu_portfolio.addEventListener('click', (event) => {
     menu_portfolio.querySelectorAll('li').forEach(el => el.classList.remove('porfolio__menu_active'))
     event.target.classList.add('porfolio__menu_active');
 });
+// Menu Scroll
+function onScroll(event) {
+    const currentPos = window.scrollY;
+    const menuDiv = document.querySelectorAll('main > div')
+    const links = menu.querySelectorAll('a')
+
+    menuDiv.forEach((el) => {
+        if(el.offsetTop <= currentPos && (el.offsetTop + el.offsetHeight) > currentPos) {
+            links.forEach((a) => {
+                a.classList.remove('header__menu_active');
+                if (el.getAttribute('id') === 'contacts' && a.getAttribute('href') == '#quote') {
+                    a.classList.add('header__menu_active')
+                }
+                if (el.getAttribute('id') === a.getAttribute('href').substring(1)) {
+                    a.classList.add('header__menu_active')
+                }
+            })
+        }
 
 
 
+    })
 
+
+
+}
+
+
+// Slider
 const getElById = (el) => document.getElementById(el);
 const getQuerySelector = (el) => document.querySelector(el);
 const eventRemove = (el) => event.target.classList.remove(el);
