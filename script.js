@@ -71,25 +71,60 @@ getElById('base__small_right').addEventListener('click', (event) => {
 });
 
 // Slider
-const screenSize = 1022;
+//const screenSize = 1022;
 const slider = getElById('slider');
 const slider_next = getElById('slider_next');
+let statusSlider = 1;
+
 getElById('button_left').addEventListener('click', (event) => {
+    const screenWidth = document.documentElement.clientWidth
     console.log('click left');
-    slider.classList.toggle("hidden");
-    slider_next.classList.toggle("hidden");
-    //for (let count = 0; count <= screenSize; count += 1) {
-    //    getElById('slider').style.right = `${count}px`
-    //}
+    //slider.classList.toggle("hidden");
+    //slider_next.classList.toggle("hidden");
+    if(statusSlider === 0) {
+        statusSlider = 1;
+        for (let count = 0; count <= screenWidth; count += 1) {
+            slider_next.style.removeProperty('left')
+            slider_next.style.removeProperty('right')
+            slider.style.right = `${count}px`
+        }
+        
+    } else {
+        statusSlider = 0;
+        for (let count = 0; count < screenWidth; count += 1) {
+            slider.style.removeProperty('left')
+            slider.style.removeProperty('right')
+            slider_next.style.left = `${count}px`
+          
+        }
+        
+    }
 });  
 
 getElById('button_right').addEventListener('click', (event) => {
     console.log('click right')
-    slider.classList.toggle("hidden");
-    slider_next.classList.toggle("hidden");
-    //for (let count = 0; count < screenSize; count += 1) {
-    //  getElById('slider').style.left = `${count}px`
-    //}
+    //slider.classList.toggle("hidden");
+    //slider_next.classList.toggle("hidden");
+    
+    const screenWidth = document.documentElement.clientWidth
+    if(statusSlider === 0) {
+        statusSlider = 1;
+        for (let count = 0; count <= screenWidth; count += 1) {
+            slider_next.style.removeProperty('left')
+            slider_next.style.removeProperty('right')
+            slider.style.right = `${count}px`
+        }
+        
+    } else {
+        statusSlider = 0;
+        for (let count = 0; count < screenWidth; count += 1) {
+            slider.style.removeProperty('left')
+            slider.style.removeProperty('right')
+            slider_next.style.left = `${count}px`
+          
+        }
+        
+    }
 });  
 // Portfolio
 

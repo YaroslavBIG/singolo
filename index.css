@@ -166,6 +166,7 @@ header .line {
 
 main .wrapper {
     position: relative;
+    height: 594px;
 }
 
 .slider {
@@ -284,12 +285,14 @@ main .wrapper {
 /*---------------------*/
 .wrapper-next {
     position: relative;
+    top: -594px;
 }
 
 .slider-next {
     position: relative;
-    height: 588px;
+    height: 594px;
     background-color: #648bf0;
+    top:-594px
 }
 
 .slider-next__button {
@@ -390,13 +393,19 @@ main .wrapper {
     left: 9px;
 }
 
-.wrapper-next .line {
+#slider_next .line {
+    position: absolute;
+    width: 1020px;
+    top: 588px;
+    margin-left: -40px;
     background-color: hsl(223, 64%, 60%);
 }
 
 .hidden {
     display: none;
 }
+
+
 /*--------------------*/
 
 .services {
