@@ -75,29 +75,39 @@ getElById('base__small_right').addEventListener('click', (event) => {
 const slider = getElById('slider');
 const slider_next = getElById('slider_next');
 let statusSlider = 1;
-
+let sliderPos = 'right';
+const screenWidth = document.documentElement.clientWidth
 getElById('button_left').addEventListener('click', (event) => {
-    const screenWidth = document.documentElement.clientWidth
+    
     console.log('click left');
     //slider.classList.toggle("hidden");
     //slider_next.classList.toggle("hidden");
     if(statusSlider === 0) {
         statusSlider = 1;
-        for (let count = 0; count <= screenWidth; count += 1) {
-            slider_next.style.removeProperty('left')
-            slider_next.style.removeProperty('right')
-            slider.style.right = `${count}px`
+        if(sliderPos === 'left') {
+            slider_next.style.right = '0px';
+            slider.style.right = `${screenWidth}px`
+            sliderPos = 'right';
+        } 
+        if(sliderPos === 'right') {
+            slider_next.style.left = '0px';
+            slider.style.left = `${screenWidth}px`
+            sliderPos = 'left';
+        }  
+
+        if(statusSlider === 1) {
+            statusSlider = 0;
+            if(sliderPos === 'left') {
+                slider.style.right = '0px';
+                slider_next.style.right = `${screenWidth}px`
+                sliderPos = 'right'
+            } 
+            if(sliderPos === 'right') {
+                slider.style.left = '0px';
+                slider_next.style.left = `${screenWidth}px`
+                sliderPos = 'left';
+            }  
         }
-        
-    } else {
-        statusSlider = 0;
-        for (let count = 0; count < screenWidth; count += 1) {
-            slider.style.removeProperty('left')
-            slider.style.removeProperty('right')
-            slider_next.style.left = `${count}px`
-          
-        }
-        
     }
 });  
 
@@ -189,3 +199,39 @@ getElById('portfolio_images').addEventListener('click', (event) => {
     portfolio.forEach(el => el.classList.remove('portfolio_border'))
     event.target.classList.add('portfolio_border');
 });
+
+
+// submit
+
+const quoteForm = document.getElementById('quote'); // Form
+const subject = document.getElementById('subject'); // Subject input
+const discript = document.getElementById('discript'); // Discription input
+const modWindow = document.querySelector('.modal_overlay'); // Overlay
+const modWindowH2 = document.getElementById('h2_mod'); // H2 Modal
+const subjMod = document.getElementById('subj_mod');    // Subject Modal
+const discriptMod = document.getElementById('discript_mod'); // Discription modal
+const buttonOk = document.getElementById('button_ok'); 
+
+const insertAdAfterBegin = (el, htmlText) => el.insertAdjacentHTML('afterBegin', htmlText); // insertAdjacentHTML foo
+
+quoteForm.addEventListener('submit', (event) => {
+    event.preventDefault();
+    modWindow.classList.remove('hidden');
+
+    insertAdAfterBegin(modWindowH2, 'Письмо отправлено'); //Status
+
+    subject.value ?  insertAdAfterBegin(subjMod, `<p id="subjectModal"><strong>Тема: </strong>${subject.value}</p>`) : insertAdAfterBegin(subjMod, '<span id="subjectModal">Без темы</span>');
+    
+    discript.value ? insertAdAfterBegin(discriptMod, `<p id="discriptionModal"><strong>Описание: </strong>${discript.value}</p>`) : insertAdAfterBegin(discriptMod, '<span id="discriptionModal">Без описания</span>');
+
+});
+
+buttonOk.addEventListener('click', function(event) {
+    quoteForm.reset();
+    modWindow.classList.add('hidden');
+    modWindowH2.innerHTML = '';
+    modWindow.querySelector('#discriptionModal').remove();
+    modWindow.querySelector('#subjectModal').remove();
+    
+    
+})

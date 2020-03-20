@@ -953,6 +953,7 @@ main .wrapper {
 }
 
 .form__wrapper {
+    position: relative;
     display: grid;
     margin-top: 44px;
     margin-bottom: 32px;
@@ -1149,4 +1150,59 @@ main .wrapper {
     height: 14px;
     margin: auto;
     background-image: url(./assets/img/about/linkedin.png);
+}
+
+
+/*Modal window*/
+
+.modal_overlay {
+    width: 107%;
+    height: 129%;
+    background-color: #f06b6442;
+    z-index: 100;
+    position: absolute;
+    padding-top: 3%;
+    margin-left: -40px;
+    margin-top: -20%;
+}
+
+.modal { 
+    width: 45%;
+    height: 48%;
+    margin-left: 25%;
+    margin-top: 20%;
+    background-color: #d6564f;
+    border: solid 1px #f2f2f2;
+    border-radius: 15px;
+    z-index: 101;
+    color: #ffffff;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    padding: 2%;
+}
+
+.modal h2 {
+    letter-spacing: 0.1pt;
+    font-size: 25px;
+    font-weight: 900;
+    text-align: center;
+}
+
+#subjectModal {
+    overflow: hidden;
+    overflow-wrap: nowrap;
+}
+
+#discriptionModal {
+    max-height: 115px;
+    overflow-wrap: break-word;
+    overflow: hidden;
+}
+
+
+.modal button {
+    position: absolute;
+    top: 85%;
+    left: 43%;
+    margin-top: 0;
 }

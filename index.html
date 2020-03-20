@@ -363,16 +363,26 @@
                     tortor mauris condimentum nibh.</p>
             </div>
             <div class="form__wrapper">
+                
+                <div class="modal_overlay hidden">
+                    <div class="modal">
+                        <h2 id="h2_mod"></h2><br>
+                        <div id="subj_mod"></div><br>
+                        <div id="discript_mod"></div>
+                        <button type="submit" id="button_ok" class="submitbtn" value="submit" name="ok" >OK</button>             
+                    </div>
+                </div>        
+                
                 <div class="quote__form">
-                    <form id="quote" action="#">
+                    <form class="form" id="quote" method="POST">
                         <input type="text" name="name" pattern="^[A-Za-z]{1}[a-z]{3,10}$"
                             title="Name can contain only latin letters length: 3-10 characters"
                             placeholder="Name (Required)" required>
                         <input type="email" name="email"
-                            pattern="^(?!.*@.*@.*$)(?!.*@.*\-\-.*\..*$)(?!.*@.*\-\..*$)(?!.*@.*\-$)(.*@.+(\..{1,11})?)$"
+                            pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
                             title="Enter a valid email" placeholder="Email (Required)" required>
-                        <input type="text" name="subject" placeholder="Subject">
-                        <textarea name="detail" id="detail" cols="30" rows="10"
+                        <input type="text" name="subject" placeholder="Subject" id="subject">
+                        <textarea name="discript" id="discript" cols="30" rows="10"
                             placeholder="Describe your project in detail..."></textarea>
                         <button type="submit">Send</button>
                     </form>
