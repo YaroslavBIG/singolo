@@ -1195,7 +1195,7 @@ main .wrapper {
 
 #subjectModal {
     overflow: hidden;
-    overflow-wrap: nowrap;
+    height: 20px;
 }
 
 #discriptionModal {
