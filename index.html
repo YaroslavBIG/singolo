@@ -18,56 +18,115 @@
                 </a>
             </div>
             <nav class="header__menu">
-                <ul class="header__menu_table">
-                    <li class="table_item"><a href="#" class="header__menu_active">home</a></li>
-                    <li class="table_item"><a href="#">services</a></li>
-                    <li class="table_item"><a href="#">portfolio</a></li>
-                    <li class="table_item"><a href="#">about</a></li>
-                    <li class="table_item"><a href="#">contact</a></li>
+                <ul class="header__menu_table" id="header__menu">
+                    <li class="table_item"><a href="#home" class="header__menu_active">home</a></li>
+                    <li class="table_item"><a href="#services">services</a></li>
+                    <li class="table_item"><a href="#portfolio">portfolio</a></li>
+                    <li class="table_item"><a href="#about">about</a></li>
+                    <li class="table_item"><a href="#quote">contact</a></li>
                 </ul>
             </nav>
-        </div>
-        <div class="line"></div>
-    </header>
-    <main>
-        <div class="wrapper">
-            <div class="slider padding-site">
-                <div class="slider__button left">
-                    <a href="#"><img src="./assets/img/arrow.svg" alt="slider__button_left"></a>
-                </div>
-                <div class="slider__iphone vertical">
-                    <div class="iphone">
-                        <div class="base background_vertical base-background_hover">
-                            <img src="./assets/img/background_iphone_vertical.png" alt="iPhone_background_vertical">
-                        </div>
-                        <div class="base">
-                            <img src="./assets/img/iPhone.png" alt="iPhone vertical">
-                        </div>
-                        <div class="base shadow_vertical">
-                            <img src="./assets/img/shadow.png" alt="Shadow vertical">
-                        </div>
-                    </div>
-                </div>
-                <div class="slider__iphone horisontal">
-                    <div class="iphone">
-                        <div class="base background_horisontal base-background_hover">
-                            <img src="./assets/img/background_iphone_horisontal.png" alt="iPhone_background_horisontal">
-                        </div>
-                        <div class="base">
-                            <img src="./assets/img/iPhone.png" alt="iPhone horisontal">
-                        </div>
-                        <div class="base shadow_horisontal">
-                            <img src="./assets/img/shadow.png" alt="Shadow horisontal">
-                        </div>
-                    </div>
-                </div>
-                <div class="slider__button right">
-                    <a href="#"><img src="./assets/img/arrow.svg" alt="slider__button_right"></a>
-                </div>
-            </div>
             <div class="line"></div>
         </div>
-        <div class="services padding-site">
+
+    </header>
+    <main> 
+        <!-- <div class="anchor" id="home"></div> -->
+        <div class="wrapper" id="home">
+
+            <div class="slider__button left">
+                <img src="./assets/img/slider/arrow.svg" id="button_left" alt="slider__button_left">
+            </div> 
+            
+            <div class="slider padding-site" id="slider">
+                
+                    <div class="slider__iphone vertical">
+                        <div class="iphone">
+                            <div class="base background_vertical" id='base_vertical'>
+                                <img src="./assets/img/background_iphone_vertical.png" alt="iPhone_background_vertical">
+                            </div>
+                            <div class="base">
+                                <img src="./assets/img/iPhone.png" alt="iPhone vertical">
+                            </div>
+                            <div class="shadow_vertical">
+                                <img src="./assets/img/shadow.png" alt="Shadow vertical">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slider__iphone horisontal">
+                        <div class="iphone">
+                            <div class="base background_horisontal" id='base_horisontal'>
+                                <img src="./assets/img/background_iphone_horisontal.png"
+                                    alt="iPhone_background_horisontal">
+                            </div>
+                            <div class="base">
+                                <img src="./assets/img/iPhone.png" alt="iPhone horisontal">
+                            </div>
+                            <div class="shadow_horisontal">
+                                <img src="./assets/img/shadow.png" alt="Shadow horisontal">
+                            </div>
+                        </div>
+                    </div>
+                
+                <div class="line"></div>
+            </div>
+
+            <div class="slider-next padding-site" id="slider_next" style="right: 1349px;">
+                <div class="slider-next__iphone vertical-next">
+                    <div class="iphone-next">
+                        <div class="base-next background_vertical-next" id='base_vertical_next'>
+                            <img src="./assets/img/slider/phonebig/phone-vertical-display.png"
+                                alt="iPhone-next_background_vertical">
+                        </div>
+                        <div class="base-next">
+                            <img src="./assets/img/slider/phonebig/phone-vertical.svg" alt="iPhone-next vertical">
+                        </div>
+                        <div class="shadow_vertical-next">
+                            <img src="./assets/img/slider/phonebig/phone-vertical-shadow.png"
+                                alt="Shadow-next vertical">
+                        </div>
+                    </div>
+                </div>
+                <div class="slider-next__iphone small-left">
+                    <div class="iphone-next_left">
+                        <div class="base-next background__small_left" id='base__small_left'>
+                            <img src="./assets/img/slider/phonesmall/phone-vertical-display.png"
+                                alt="iPhone-next_background_vertical">
+                        </div>
+                        <div class="base-next">
+                            <img src="./assets/img/slider/phonesmall/phone-vertical.svg" alt="iPhone-next vertical">
+                        </div>
+                        <div class="shadow_vertical-next">
+                            <img src="./assets/img/slider/phonesmall/phone-vertical-shadow.png"
+                                alt="Shadow-next vertical">
+                        </div>
+                    </div>
+                </div>
+                <div class="slider-next__iphone small-right">
+                    <div class="iphone-next_left">
+                        <div class="base-next background__small_right" id='base__small_right'>
+                            <img src="./assets/img/slider/phonesmall/phone-vertical-display.png"
+                                alt="iPhone-next_background_vertical">
+                        </div>
+                        <div class="base-next">
+                            <img src="./assets/img/slider/phonesmall/phone-vertical.svg" alt="iPhone-next vertical">
+                        </div>
+                        <div class="shadow_vertical-next">
+                            <img src="./assets/img/slider/phonesmall/phone-vertical-shadow.png"
+                                alt="Shadow-next vertical">
+                        </div>
+                    </div>
+                </div>
+                <div class="line"></div>
+            </div>
+
+          
+            <div class="slider__button right">
+                <img src="./assets/img/slider/arrow.svg" alt="slider__button_right" id="button_right">
+            </div>
+        </div>
+
+        <div class="services padding-site" id="services">
             <div class="services-our">
                 <h2>Our Services</h2>
                 <p>Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus,
@@ -138,69 +197,69 @@
             </div>
         </div>
         <div class="line line__services"></div>
-        <div class="portfolio">
+        <div class="portfolio" id="portfolio">
             <div class="porfolio-text">
                 <h2>Portfolio</h2>
                 <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
                 <div class="porfolio_menu">
-                    <ul class="menu">
-                        <li class="menu_link"><a href="#">All</a></li>
-                        <li class="menu_link"><a href="#">Web Design</a></li>
-                        <li class="menu_link"><a href="#">Graphic Design</a></li>
-                        <li class="menu_link"><a href="#">Artwork</a></li>
+                    <ul class="menu" id="porfolio_menu">
+                        <li class="menu_link all">All</li>
+                        <li class="menu_link">Web Design</li>
+                        <li class="menu_link">Graphic Design</li>
+                        <li class="menu_link">Artwork</li>
                     </ul>
                 </div>
             </div>
-            <div class="portfolio-images">
+            <div class="portfolio-images" id="portfolio_images">
                 <div class="portfolio_item">
-                    <div class="portfolio_img-1 portfolio_img_size"><a href="#" class="link"></a></div>
+                    <div class="portfolio_img-1 portfolio_img_size"></div>
                 </div>
                 <div class="portfolio_item">
-                    <div class="portfolio_img-2 portfolio_img_size"><a href="#" class="link"></a></div>
+                    <div class="portfolio_img-2 portfolio_img_size"></div>
                 </div>
                 <div class="portfolio_item">
-                    <div class="portfolio_img-3 portfolio_img_size"><a href="#" class="link"></a></div>
+                    <div class="portfolio_img-3 portfolio_img_size"></div>
                 </div>
                 <div class="portfolio_item">
-                    <div class="portfolio_img-4 portfolio_img_size"><a href="#" class="link"></a></div>
+                    <div class="portfolio_img-4 portfolio_img_size"></div>
                 </div>
                 <div class="portfolio_item">
-                    <div class="portfolio_img-5 portfolio_img_size"><a href="#" class="link"></a></div>
+                    <div class="portfolio_img-5 portfolio_img_size"></div>
                 </div>
                 <div class="portfolio_item">
-                    <div class="portfolio_img-6 portfolio_img_size"><a href="#" class="link"></a></div>
+                    <div class="portfolio_img-6 portfolio_img_size"></div>
                 </div>
                 <div class="portfolio_item">
-                    <div class="portfolio_img-7 portfolio_img_size"><a href="#" class="link"></a></div>
+                    <div class="portfolio_img-7 portfolio_img_size"></div>
                 </div>
                 <div class="portfolio_item">
-                    <div class="portfolio_img-8 portfolio_img_size"><a href="#" class="link"></a></div>
+                    <div class="portfolio_img-8 portfolio_img_size"></div>
                 </div>
                 <div class="portfolio_item">
-                    <div class="portfolio_img-9 portfolio_img_size"><a href="#" class="link"></a></div>
+                    <div class="portfolio_img-9 portfolio_img_size"></div>
                 </div>
                 <div class="portfolio_item">
-                    <div class="portfolio_img-10 portfolio_img_size"><a href="#" class="link"></a></div>
+                    <div class="portfolio_img-10 portfolio_img_size"></div>
                 </div>
                 <div class="portfolio_item">
-                    <div class="portfolio_img-11 portfolio_img_size"><a href="#" class="link"></a></div>
+                    <div class="portfolio_img-11 portfolio_img_size"></div>
                 </div>
                 <div class="portfolio_item">
-                    <div class="portfolio_img-12 portfolio_img_size"><a href="#" class="link"></a></div>
+                    <div class="portfolio_img-12 portfolio_img_size"></div>
                 </div>
                 <div class="portfolio_item">
-                    <div class="portfolio_img-10 portfolio_img_size"><a href="#" class="link"></a></div>
+                    <div class="portfolio_img-10 portfolio_img_size"></div>
                 </div>
                 <div class="portfolio_item">
-                    <div class="portfolio_img-11 portfolio_img_size"><a href="#" class="link"></a></div>
+                    <div class="portfolio_img-11 portfolio_img_size"></div>
                 </div>
                 <div class="portfolio_item">
-                    <div class="portfolio_img-12 portfolio_img_size"><a href="#" class="link"></a></div>
+                    <div class="portfolio_img-12 portfolio_img_size"></div>
                 </div>
             </div>
         </div>
         <div class="line portfolio_line"></div>
-        <div class="about-us about-us_padding">
+        <div class="about-us about-us_padding" id="about">
             <div class="about-us_text">
                 <h2>About Us</h2>
                 <p>Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus,
@@ -211,9 +270,9 @@
                 <div class="photo">
                     <div class="photo_img photo_img-1"></div>
                     <h3>Adam Jensen</h3>
-<!--white-space: pre; CSS STR 666-->
+                    <!--white-space: pre; CSS STR 666-->
                     <p>Quisque luctus, quam eget molestie commodo, lacus purus
-cursus purus, nec rutrum tellus dolor id lorem.</p>
+                        cursus purus, nec rutrum tellus dolor id lorem.</p>
                     <div class="photo_ico-social">
                         <div class="ico-social_circle">
                             <div class="ico_social_img-1">
@@ -296,7 +355,7 @@ cursus purus, nec rutrum tellus dolor id lorem.</p>
             </div>
         </div>
         <div class="line about-us_line"></div>
-        <div class="quote padding-site">
+        <div class="quote padding-site" id="contacts">
             <div class="quote__text">
                 <h2>Get a Quote</h2>
                 <p>Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus,
@@ -304,18 +363,28 @@ cursus purus, nec rutrum tellus dolor id lorem.</p>
                     tortor mauris condimentum nibh.</p>
             </div>
             <div class="form__wrapper">
+                
+                <div class="modal_overlay hidden">
+                    <div class="modal">
+                        <h2 id="h2_mod"></h2><br>
+                        <div id="subj_mod"></div><br>
+                        <div id="discript_mod"></div>
+                        <button type="submit" id="button_ok" class="submitbtn" value="submit" name="ok" >OK</button>             
+                    </div>
+                </div>        
+                
                 <div class="quote__form">
-                    <form id="quote" action="#">
+                    <form class="form" id="quote" method="POST">
                         <input type="text" name="name" pattern="^[A-Za-z]{1}[a-z]{3,10}$"
                             title="Name can contain only latin letters length: 3-10 characters"
                             placeholder="Name (Required)" required>
                         <input type="email" name="email"
-                            pattern="^(?!.*@.*@.*$)(?!.*@.*\-\-.*\..*$)(?!.*@.*\-\..*$)(?!.*@.*\-$)(.*@.+(\..{1,11})?)$"
+                            pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
                             title="Enter a valid email" placeholder="Email (Required)" required>
-                        <input type="text" name="subject" placeholder="Subject">
-                        <textarea name="detail" id="detail" cols="30" rows="10"
+                        <input type="text" name="subject" placeholder="Subject" id="subject">
+                        <textarea name="discript" id="discript" cols="30" rows="10"
                             placeholder="Describe your project in detail..."></textarea>
-                        <button type="submit">Submit</button>
+                        <button type="submit">Send</button>
                     </form>
                 </div>
                 <div class="adress">
@@ -336,7 +405,6 @@ cursus purus, nec rutrum tellus dolor id lorem.</p>
     </main>
     <footer class="footer">
         <div class="footer__wrapper padding-site">
-            <span>&copy; Copyright 2013  by PSDchat.com</span>
             <div class="footer__ico-social">
                 <div class="ico-social_circle">
                     <div class="ico_social_img-1">
@@ -361,6 +429,7 @@ cursus purus, nec rutrum tellus dolor id lorem.</p>
             </div>
         </div>
     </footer>
+    <script src="./script.js"></script>
 </body>
 
 </html>
