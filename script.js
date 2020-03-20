@@ -155,7 +155,9 @@ menu_portfolio.addEventListener('click', (event) => {
             classLst.remove(cls);
         }
     };
-//all selector
+
+
+    //all selector
     if(event.target.classList.contains('all')) {
         portfolio.forEach(el => el.classList.remove('portfolio_border'))
         for(let count = 1; count <= portfolioElQuant; count += 1) {
@@ -164,7 +166,6 @@ menu_portfolio.addEventListener('click', (event) => {
             classLst.add(cls)
             }
         } else { //otherCat
-        let arrImg = [];
         portfolio.forEach(el => el.classList.remove('portfolio_border'))
         for(const el of portfolio) {
             const classLst = el.classList
@@ -176,21 +177,19 @@ menu_portfolio.addEventListener('click', (event) => {
             }
         }
         
-        for(let count = 0; count < portfolioElQuant; count += 1) {
-        
-        let elem = portfolio[count];
-        const classLst = elem.classList;
-        let value = randomInteger(1, portfolioElQuant);
-        if(arrImg.includes(value)) {
-            value = randomInteger(1, portfolioElQuant);
-        } else {
-            classLst.add(`portfolio_img-${value}`);
-            arrImg.push(value);
+        const randomArr = [];
+        while(randomArr.length < 12) {
+            const num = randomInteger(1, 12);
+            if (!randomArr.includes(num)) randomArr.push(num);
+        };
+
+        for(let count = 0; count < 12; count += 1) {
+            const el = portfolio[count].classList;
+            const clsNum = randomArr[count];
+            const cls = `portfolio_img-${clsNum}`;
+            el.add(cls);
         }
     }
-    
-
-}
 });
 
 // border
