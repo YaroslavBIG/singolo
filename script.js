@@ -71,45 +71,38 @@ getElById('base__small_right').addEventListener('click', (event) => {
 });
 
 // Slider
-//const screenSize = 1022;
+
 const slider = getElById('slider');
 const slider_next = getElById('slider_next');
 let statusSlider = 1;
 let sliderPos = 'right';
-const screenWidth = document.documentElement.clientWidth
+
 getElById('button_left').addEventListener('click', (event) => {
     
     console.log('click left');
     //slider.classList.toggle("hidden");
     //slider_next.classList.toggle("hidden");
+    const screenWidth = document.documentElement.clientWidth
     if(statusSlider === 0) {
         statusSlider = 1;
-        if(sliderPos === 'left') {
-            slider_next.style.right = '0px';
-            slider.style.right = `${screenWidth}px`
-            sliderPos = 'right';
-        } 
-        if(sliderPos === 'right') {
-            slider_next.style.left = '0px';
-            slider.style.left = `${screenWidth}px`
-            sliderPos = 'left';
-        }  
-
-        if(statusSlider === 1) {
-            statusSlider = 0;
-            if(sliderPos === 'left') {
-                slider.style.right = '0px';
-                slider_next.style.right = `${screenWidth}px`
-                sliderPos = 'right'
-            } 
-            if(sliderPos === 'right') {
-                slider.style.left = '0px';
-                slider_next.style.left = `${screenWidth}px`
-                sliderPos = 'left';
-            }  
+        for (let count = 0; count <= screenWidth; count += 1) {
+            slider_next.style.removeProperty('left')
+            slider_next.style.removeProperty('right')
+            slider.style.right = `${count}px`
         }
+        
+    } else {
+        statusSlider = 0;
+        for (let count = 0; count < screenWidth; count += 1) {
+            slider.style.removeProperty('left')
+            slider.style.removeProperty('right')
+            slider_next.style.left = `${count}px`
+          
+        }
+        
     }
 });  
+  
 
 getElById('button_right').addEventListener('click', (event) => {
     console.log('click right')
