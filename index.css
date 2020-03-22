@@ -231,7 +231,7 @@ main .wrapper {
     z-index: 2;
 }
 
-.base img {
+.clickable {
     -webkit-transition: all 1s ease-out;
     -moz-transition: all 1s ease-out;
     -ms-transition: all 1s ease-out;
@@ -398,6 +398,14 @@ main .wrapper {
     z-index: 3;
     top: 42px;
     left: 9px;
+}
+
+#slider_next {
+    transition: all 1s ease-out;
+    -webkit-transition: all 1s ease-out;
+    -moz-transition: all 1s ease-out;
+    -ms-transition: all 1s ease-out;
+    -o-transition: all 1s ease-out;
 }
 
 #slider_next .line {
