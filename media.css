@@ -117,5 +117,9 @@
         gap: 20px;
     }
 
+    .modal button {
+        top: 73%;
+        left: 41%;
+    }
     
 }
