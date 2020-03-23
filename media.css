@@ -1,0 +1,121 @@
+@media screen and (max-width:1019px) and (min-width:768px){
+    body {
+        width: 768px;
+    }
+
+    header .wrapper {
+        width: 688px;
+    }
+    /* Slider */
+    main .wrapper {
+        height: 451px;
+    }
+
+    .left {
+        top: 50%;
+        left: 27px;
+    }
+
+    .right {
+        top: 50%;
+        left: 726px;
+    }
+
+    .iphone {
+        transform: scale(0.747);
+    }
+
+    .vertical {
+        top: 53px;
+        left: 80px;
+    }
+
+    .horisontal {
+        top: 150px;
+        left: 655px;
+        
+    }
+
+    /* Slider Next */
+
+    .iphone-next {
+        transform: scale(0.747);
+    }
+
+    .vertical-next {
+        top: 53px;
+        left: 299px;
+        z-index: 3;
+    }
+
+    .small-left {
+        top: 134px;
+        left: 194px;
+    }
+
+    .small-right {
+        top: 134px;
+        left: 470px;
+    }
+
+    /* Services */
+
+    .services-ico {
+        display: grid;
+        margin-top: 38px;
+        margin-left: 1px;
+        grid-template-columns: 353px 300px;
+        grid-template-rows: 139px 139px 139px;
+    }
+
+    .services-our p {
+        max-height: 91px;
+    }
+
+    /* Portfolio */
+
+    .portfolio {
+        height: 1065px;
+    }
+
+    .porfolio-text p {
+        font-weight: 300;
+        line-height: 30px;
+    }
+    
+    .portfolio-images {
+        grid-template-columns: repeat(3, 217px);
+        grid-template-rows: 183px;
+    }
+
+    /* About US */
+
+    .about-us {
+        min-height: 676px;
+    }
+
+    .about-us_photo {
+        grid-template-columns: repeat(3, 219px);
+        grid-template-rows: 360px;
+        grid-gap: 20px;
+    }
+    
+    .photo_img {
+        width: 218px;
+        height: 218px;
+        background-size: 218px;
+    }
+
+    /* Quore */
+
+    .quote {
+        min-height: 630px;
+    }
+
+    .form__wrapper {
+        grid-template-columns: 442px 221px;
+        gap: 20px;
+    }
+
+    
+}
