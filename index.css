@@ -43,10 +43,6 @@ article {
     padding: 0px 40px 0px 40px;
 }
 
-.line {
-    height: 6px;
-}
-
 .link {
     display: block;
     height: 100%;
@@ -84,6 +80,7 @@ header .wrapper {
     width: 940px;
     height: 89px;
     background-color: #2d303a;
+    border-bottom: 6px solid #323746;
 }
 
 .logo {
@@ -156,18 +153,11 @@ header .wrapper {
     font-weight: 900;
 }
 
-
-header .line {
-    position: absolute;
-    top: 83px;
-    width: 1020px;
-    margin-left: -40px;
-    background-color: #323746;
-}
-
 main .wrapper {
     position: relative;
     height: 594px;
+    padding-top: 6px;
+    border-bottom: 6px solid #ea676b;
 }
 
 .slider {
@@ -199,12 +189,12 @@ main .wrapper {
 }
 
 .left {
-    top: 281px;
+    top: 287px;
     left: 42px;
 }
 
 .right {
-    top: 278px;
+    top: 284px;
     left: 964px;
     -webkit-transform: rotate(180deg);
     -moz-transform: rotate(180deg);
@@ -283,12 +273,6 @@ main .wrapper {
     transform: rotate(90deg);
 }
 
-#home .line {
-    width: 1020px;
-    margin-left: -40px;
-    background-color: #ea676b;
-}
-
 /*---------------------*/
 .wrapper-next {
     position: relative;
@@ -300,6 +284,7 @@ main .wrapper {
     top: -594px;
     height: 594px;
     background-color: #648bf0;
+    border-bottom: 6px solid hsl(223, 64%, 60%);
 }
 
 .slider-next__button {
@@ -408,14 +393,6 @@ main .wrapper {
     -o-transition: all 1s ease-out;
 }
 
-#slider_next .line {
-    position: absolute;
-    top: 588px;
-    width: 1020px;
-    margin-left: -40px;
-    background-color: hsl(223, 64%, 60%);
-}
-
 .hidden {
     display: none;
 }
@@ -426,6 +403,7 @@ main .wrapper {
 .services {
     min-height: 494px;
     background-color: #f2f2f2;
+    border-bottom: 6px solid #fff;
 }
 
 .services-our h2 {
@@ -569,14 +547,11 @@ main .wrapper {
     background: url(./assets/img/star.svg);
 }
 
-.line .line__services {
-    background-color: #fff;
-}
-
 .portfolio {
     min-height: 863px;
     padding: 0px 30px 0px 40px;
     background-color: #2d303a;
+    border-bottom: 6px solid #323746;
 }
 
 .porfolio-text h2 {
@@ -759,13 +734,10 @@ main .wrapper {
     border: 5px solid #F06C64;
 }
 
-.portfolio_line {
-    background-color: #323746;
-}
-
 .about-us {
     min-height: 728px;
     background-color: #f2f2f2;
+    border-bottom: 6px solid #fff;
 }
 
 .about-us_padding {
@@ -857,7 +829,6 @@ main .wrapper {
 
 .photo:first-child p {
     margin-left: 0px;
-    white-space: pre;
     letter-spacing: -0.06px;
 }
 
@@ -931,10 +902,6 @@ main .wrapper {
     background-image: url(./assets/img/about/linkedin.png);
 }
 
-.about-us_line {
-    background-color: #ffffff;
-}
-
 #contacts {
     scroll-margin: 80px;
 }
@@ -942,9 +909,11 @@ main .wrapper {
 .quote {
     padding-top: 60px;
     padding-right: 23px;
+    height: 588px;
     text-align: justify;
     color: #f0d8d9;
     background-color: #f06c64;
+    border-bottom: 6px solid #ea676b;
 }
 
 .quote__text h2 {
@@ -968,7 +937,6 @@ main .wrapper {
     position: relative;
     display: grid;
     margin-top: 44px;
-    margin-bottom: 32px;
     grid-template-columns: 619px 301px;
     gap: 20px;
 }
@@ -1100,13 +1068,6 @@ main .wrapper {
     margin-right: 10px;
     margin-left: 0px;
     content: url(./assets/img/contacts/mail.png);
-}
-
-
-.quote .line {
-    width: 1020px;
-    margin-left: -40px;
-    background-color: #ea676b;
 }
 
 .footer__wrapper {
