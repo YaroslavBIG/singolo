@@ -5,8 +5,16 @@ const menu = document.getElementById('header__menu');
 document.addEventListener('scroll', onScroll);
 
 menu.addEventListener('click', (event) => {
+    event.preventDefault();
+    
+    const elHref = event.target.getAttribute('href').substr(1);
+    const menuHeight = menu.offsetHeight;
+    const elPos = getElById(`${elHref}`).offsetTop;
+    const scrlTo = elPos - menuHeight;
+
     menu.querySelectorAll('a').forEach(el => el.classList.remove('header__menu_active'))
     event.target.classList.add('header__menu_active');
+    window.scrollTo(0, `${scrlTo}`);
 });
 
 const menu_portfolio = document.getElementById('porfolio_menu');
@@ -16,7 +24,7 @@ menu_portfolio.addEventListener('click', (event) => {
     event.target.classList.add('porfolio__menu_active');
 });
 
-// Menu Scroll
+// Menu Active Scroll
 function onScroll(event) {
     const currentPos = window.scrollY;
     const menuDiv = document.querySelectorAll('main > div')
@@ -37,7 +45,7 @@ function onScroll(event) {
     })
 }
 
-// Screen off
+// Slider Screen off
 const getElById = (el) => document.getElementById(el);
 const eventRemove = (el, cls) => el.classList.remove(cls);
 const eventAdd = (el, cls) => el.classList.add(cls);
