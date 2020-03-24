@@ -44,20 +44,32 @@ function onScroll(event) {
 
 
 // Slider
+// Slider
 const getElById = (el) => document.getElementById(el);
-
-const displayHidden = 'base-background_hover'; // CSS class opacity(0%)
-const backroundRemove = (el) => el.classList.remove(displayHidden);
-const backroundAdd = (el) => el.classList.add(displayHidden);
-
+const getQuerySelector = (el) => document.querySelector(el);
+const eventRemove = (el) => event.target.classList.remove(el);
+const eventAdd  = (el) => event.target.classList.add(el);
+const displayHidden = 'base-background_hover';
 // Screen off
-const clicableElements = document.getElementsByClassName('clickable');
-for(const el of clicableElements) {
-    el.addEventListener('click', (event) => {
-        const elBackground = event.path[2].getElementsByClassName('hidable')[0]; //Get Current Display El
-        elBackground.classList.contains(displayHidden) ? backroundRemove(elBackground) : backroundAdd(elBackground);
-    });
-};
+getElById('base_horisontal').addEventListener('click', (event) => {
+    getQuerySelector('#base_horisontal > img').classList.contains(displayHidden) ? eventRemove(displayHidden) : eventAdd(displayHidden);
+});
+
+getElById('base_vertical').addEventListener('click', (event) => {
+    getQuerySelector('#base_vertical > img').classList.contains(displayHidden) ? eventRemove(displayHidden) : eventAdd(displayHidden);
+});
+
+getElById('base_vertical_next').addEventListener('click', (event) => {
+    getQuerySelector('#base_vertical_next > img').classList.contains(displayHidden) ? eventRemove(displayHidden) : eventAdd(displayHidden);
+});
+
+getElById('base__small_left').addEventListener('click', (event) => {
+    getQuerySelector('#base__small_left > img').classList.contains(displayHidden) ? eventRemove(displayHidden) : eventAdd(displayHidden);
+});
+
+getElById('base__small_right').addEventListener('click', (event) => {
+    getQuerySelector('#base__small_right > img').classList.contains(displayHidden) ? eventRemove(displayHidden) : eventAdd(displayHidden);
+});
 
 // Slider
 
