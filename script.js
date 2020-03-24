@@ -15,14 +15,16 @@ menu_portfolio.addEventListener('click', (event) => {
     menu_portfolio.querySelectorAll('li').forEach(el => el.classList.remove('porfolio__menu_active'))
     event.target.classList.add('porfolio__menu_active');
 });
+
 // Menu Scroll
 function onScroll(event) {
     const currentPos = window.scrollY;
+    console.log(currentPos)
     const menuDiv = document.querySelectorAll('main > div')
     const links = menu.querySelectorAll('a')
 
     menuDiv.forEach((el) => {
-        if(el.offsetTop <= currentPos && (el.offsetTop + el.offsetHeight) > currentPos) {
+        if(el.offsetTop <= currentPos + 100 && (el.offsetTop + el.offsetHeight) > currentPos - 100) {
             links.forEach((a) => {
                 a.classList.remove('header__menu_active');
                 if (el.getAttribute('id') === 'contacts' && a.getAttribute('href') == '#quote') {
@@ -33,49 +35,28 @@ function onScroll(event) {
                 }
             })
         }
-
-
-
     })
-
-
-
 }
 
-
-// Slider
-// Slider
-const getElById = (el) => document.getElementById(el);
-const getQuerySelector = (el) => document.querySelector(el);
-const eventRemove = (el) => event.target.classList.remove(el);
-const eventAdd  = (el) => event.target.classList.add(el);
-const displayHidden = 'base-background_hover';
 // Screen off
-getElById('base_horisontal').addEventListener('click', (event) => {
-    getQuerySelector('#base_horisontal > img').classList.contains(displayHidden) ? eventRemove(displayHidden) : eventAdd(displayHidden);
-});
+const getElById = (el) => document.getElementById(el);
+const eventRemove = (el, cls) => el.classList.remove(cls);
+const eventAdd = (el, cls) => el.classList.add(cls);
+const displayHidden = 'base-background_hover';
+const clicableElements = document.getElementsByClassName('clickable');
 
-getElById('base_vertical').addEventListener('click', (event) => {
-    getQuerySelector('#base_vertical > img').classList.contains(displayHidden) ? eventRemove(displayHidden) : eventAdd(displayHidden);
-});
-
-getElById('base_vertical_next').addEventListener('click', (event) => {
-    getQuerySelector('#base_vertical_next > img').classList.contains(displayHidden) ? eventRemove(displayHidden) : eventAdd(displayHidden);
-});
-
-getElById('base__small_left').addEventListener('click', (event) => {
-    getQuerySelector('#base__small_left > img').classList.contains(displayHidden) ? eventRemove(displayHidden) : eventAdd(displayHidden);
-});
-
-getElById('base__small_right').addEventListener('click', (event) => {
-    getQuerySelector('#base__small_right > img').classList.contains(displayHidden) ? eventRemove(displayHidden) : eventAdd(displayHidden);
-});
+for(const el of clicableElements) {
+    el.addEventListener('click', (event) => {
+        const currentDisplay = event.target.parentElement.classList.contains('hidable') ? event.target.parentElement : event.target.parentElement.previousElementSibling;
+        currentDisplay.classList.contains(displayHidden) ? eventRemove(currentDisplay, displayHidden) : eventAdd(currentDisplay, displayHidden);
+    });
+};
 
 // Slider
 
 const slider = getElById('slider');
 const slider_next = getElById('slider_next');
-let statusSlider = 1;
+let statusSlider = 0;
 let sliderPos = 'right';
 
 getElById('button_left').addEventListener('click', (event) => {
