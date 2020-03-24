@@ -19,7 +19,6 @@ menu_portfolio.addEventListener('click', (event) => {
 // Menu Scroll
 function onScroll(event) {
     const currentPos = window.scrollY;
-    console.log(currentPos)
     const menuDiv = document.querySelectorAll('main > div')
     const links = menu.querySelectorAll('a')
 
