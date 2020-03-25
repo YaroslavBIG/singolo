@@ -196,12 +196,18 @@ const insertAdAfterBegin = (el, htmlText) => el.insertAdjacentHTML('afterBegin',
 quoteForm.addEventListener('submit', (event) => {
     event.preventDefault();
     modWindow.classList.remove('hidden');
-
+// insertAdAfterBegin(subjMod, `<p id="subjectModal"><strong>Тема: </strong>${subject.value}</p>`)
     insertAdAfterBegin(modWindowH2, 'Письмо отправлено'); //Status
-
-    subject.value ?  insertAdAfterBegin(subjMod, `<p id="subjectModal"><strong>Тема: </strong>${subject.value}</p>`) : insertAdAfterBegin(subjMod, '<span id="subjectModal">Без темы</span>');
     
-    discript.value ? insertAdAfterBegin(discriptMod, `<p id="discriptionModal"><strong>Описание: </strong>${discript.value}</p>`) : insertAdAfterBegin(discriptMod, '<span id="discriptionModal">Без описания</span>');
+    const safetyTextIns = (el, textValue, tit) => {
+        insertAdAfterBegin(el, `<p class=${el.id}></p>`);
+        const selector = `#${el.id} > p`;
+
+        document.querySelector(selector).textContent = `${tit} ${textValue}`;
+    };
+    subject.value ?  safetyTextIns(subjMod, subject.value, 'Тема:') : safetyTextIns(subjMod, 'Без темы', '');
+                       
+    discript.value ? safetyTextIns(discriptMod, discript.value, 'Описание:') : safetyTextIns(discriptMod, 'Без описания', '');
 
 });
 
@@ -209,8 +215,8 @@ buttonOk.addEventListener('click', function(event) {
     quoteForm.reset();
     modWindow.classList.add('hidden');
     modWindowH2.innerHTML = '';
-    modWindow.querySelector('#discriptionModal').remove();
-    modWindow.querySelector('#subjectModal').remove();
+    modWindow.querySelector('.subj_mod').remove();
+    modWindow.querySelector('.discript_mod').remove();
     
     
 })

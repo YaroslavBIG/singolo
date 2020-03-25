@@ -1157,12 +1157,12 @@ main .wrapper {
     font-weight: 900;
 }
 
-#subjectModal {
+.subj_mod {
     overflow: hidden;
     height: 20px;
 }
 
-#discriptionModal {
+.discript_mod {
     overflow: hidden;
     max-height: 115px;
     overflow-wrap: break-word;
