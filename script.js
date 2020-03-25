@@ -1,6 +1,7 @@
 //Menu
 
 const menu = document.getElementById('header__menu');
+const menuHeight = menu.offsetHeight;
 
 document.addEventListener('scroll', onScroll);
 
@@ -8,7 +9,6 @@ menu.addEventListener('click', (event) => {
     event.preventDefault();
     
     const elHref = event.target.getAttribute('href').substr(1);
-    const menuHeight = menu.offsetHeight;
     const elPos = getElById(`${elHref}`).offsetTop;
     const scrlTo = elPos - menuHeight;
 
@@ -31,7 +31,7 @@ function onScroll(event) {
     const links = menu.querySelectorAll('a')
 
     menuDiv.forEach((el) => {
-        if(el.offsetTop <= currentPos + 100 && (el.offsetTop + el.offsetHeight) > currentPos - 100) {
+        if(el.offsetTop <= currentPos + menuHeight && (el.offsetTop + el.offsetHeight) > currentPos - menuHeight) {
             links.forEach((a) => {
                 a.classList.remove('header__menu_active');
                 if (el.getAttribute('id') === 'contacts' && a.getAttribute('href') == '#quote') {
