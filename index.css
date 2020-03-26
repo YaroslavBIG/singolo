@@ -801,8 +801,8 @@ main .wrapper {
 }
 
 .portfolio_border {
-    width: 210px;
-    height: 177px;
+    width: initial;
+    height: -webkit-fill-available;
     border: 5px solid #F06C64;
 }
 
@@ -1240,9 +1240,8 @@ main .wrapper {
 }
 
 .discript_mod {
-    overflow: hidden;
+    overflow: scroll;
     max-height: 115px;
-    overflow-wrap: break-word;
 }
 
 
