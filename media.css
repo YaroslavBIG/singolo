@@ -10,7 +10,7 @@
     main .wrapper {
         height: 451px;
     }
-
+    
     .left {
         top: 50%;
         left: 27px;
@@ -124,7 +124,13 @@
     
 }
 
-@media screen and (max-width:767px) and (min-width:375px){
+@media screen and (max-width:767px){
+header {
+    display: flex;
+    height: 70px;
+    justify-content: center;
+}
+
 .header__menu {
     display: none;
 }
@@ -133,4 +139,174 @@
     display: flex;
 }
 
+.logo {
+    margin-top: 24px;
+    margin-left: 29%;
+    padding-top: 0px;
 }
+
+body {
+    width: 375px;
+}
+
+header .wrapper {
+    width: 375px;
+    height: 70px;
+    padding: 0;
+    justify-content: unset;
+}
+/* Slider */
+main .wrapper {
+    height: 220px;
+}
+
+
+.left {
+    top: 42%;
+    left: 10px;
+}
+
+.right {
+    top: 42%;
+    left: 350px;
+}
+
+.iphone {
+    transform: scale(0.37);
+        -webkit-transform: scale(0.37);
+        -moz-transform: scale(0.37);
+        -ms-transform: scale(0.37);
+        -o-transform: scale(0.37);
+}
+
+.vertical {
+    top: 10%;
+    left: 12%;
+}
+
+.horisontal {
+    top: 29%;
+    left: 88%;
+    
+}
+
+/* Slider Next */
+
+.iphone-next {
+    transform: scale(0.37);
+    -webkit-transform: scale(0.37);
+    -moz-transform: scale(0.37);
+    -ms-transform: scale(0.37);
+    -o-transform: scale(0.37);
+}
+
+.vertical-next {
+    top: 10%;
+    left: 40%;
+    z-index: 3;
+}
+
+.small-left {
+    top: 26%;
+    left: 26%;
+}
+
+.small-right {
+    top: 26%;
+    left: 63%;
+}
+
+/* Services */
+
+.services-our h2 {
+    margin-top: 0px;
+    padding-top: 25px;
+}
+
+.services-our p {
+    max-height: 205px;
+}
+
+
+.services-ico {
+    display: grid;
+    margin-top: 38px;
+    margin-left: 1px;
+    grid-template-columns: 300px;
+    grid-template-rows: repeat(6, 110px);
+}
+
+
+/* Portfolio */
+
+.about-us_text p {
+    overflow: hidden;
+    max-height: calc(23pt*7);
+}
+
+.portfolio {
+    min-height: 844px;
+    padding: 0px 30px 0px 30px;
+}
+
+.porfolio-text p {
+    font-weight: 300;
+    line-height: 30px;
+}
+
+.portfolio-images {
+    display: grid;
+    margin-top: 19px;
+    grid-template-columns: repeat(2, 151px);
+    grid-template-rows: repeat(4,128px);
+    grid-gap: 10px;
+}
+
+.portfolio_item {
+    z-index: 1;
+    width: 151px;
+    height: 128px;
+    border-radius: 3px;
+    background-color: #464b5e;
+}
+
+.portfolio-images :nth-child(n+9) {
+    display: none;
+}
+
+/* About US */
+
+.about-us {
+    min-height: 676px;
+}
+
+.about-us_photo {
+    grid-template-columns: 314px;
+    grid-template-rows: 440px;
+    grid-gap: 34px;
+}
+
+.photo_img {
+    width: 314px;
+    height: 314px;
+    background-size: 314px;
+}
+
+/* Quore */
+
+.quote {
+    min-height: 630px;
+}
+
+.form__wrapper {
+    grid-template-columns: 442px 221px;
+    gap: 20px;
+}
+
+.modal button {
+    top: 73%;
+    left: 41%;
+}
+
+}
+
