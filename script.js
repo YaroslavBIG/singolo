@@ -71,49 +71,69 @@ getElById('button_left').addEventListener('click', (event) => {
     console.log('click left');
     const screenWidth = document.documentElement.clientWidth
     if(statusSlider === 0) {
-        statusSlider = 1;
+        
+            slider_next.style.removeProperty('left');
+            slider_next.style.removeProperty('right');
         for (let count = 0; count <= screenWidth; count += 1) {
-            slider_next.style.removeProperty('left')
-            slider_next.style.removeProperty('right')
-            slider.style.right = `${count}px`
+            setTimeout(function(){
+                slider.style.right = `${count}px`;
+            }, 100);
         }
-        
+        statusSlider = 1;
     } else {
-        statusSlider = 0;
-        for (let count = 0; count < screenWidth; count += 1) {
-            slider.style.removeProperty('left')
-            slider.style.removeProperty('right')
-            slider_next.style.left = `${count}px`
-          
-        }
         
+            slider.style.removeProperty('right');
+            slider.style.removeProperty('left');
+        for (let count = 0; count < screenWidth; count += 1) {
+            setTimeout(function(){
+                slider_next.style.right = `${count}px`;
+            }, 100);
+        }
+        statusSlider = 0;
     }
 });  
   
 
 getElById('button_right').addEventListener('click', (event) => {
     console.log('click right')
+    console.log(statusSlider)
     //slider.classList.toggle("hidden");
     //slider_next.classList.toggle("hidden");
     
     const screenWidth = document.documentElement.clientWidth
     if(statusSlider === 0) {
-        statusSlider = 1;
+        
+        console.log(statusSlider)
+           slider.style.removeProperty('left');
+            slider_next.style.removeProperty('left');
+            slider.style.removeProperty('right');
+            slider_next.style.removeProperty('right');
+            //slider_next.style.right = `${screenWidth}px`;
+            slider.style.left = '0px';
         for (let count = 0; count <= screenWidth; count += 1) {
-            slider_next.style.removeProperty('left')
-            slider_next.style.removeProperty('right')
-            slider.style.right = `${count}px`
+            setTimeout(function(){
+               // slider_next.style.right = `${screenWidth - count}px`;
+                slider.style.left = `${count}px`;
+            }, 300);
         }
-        
+        statusSlider = 1;
     } else {
-        statusSlider = 0;
-        for (let count = 0; count < screenWidth; count += 1) {
-            slider.style.removeProperty('left')
-            slider.style.removeProperty('right')
-            slider_next.style.left = `${count}px`
-          
-        }
         
+        console.log(statusSlider)
+        slider.style.removeProperty('right');
+        slider_next.style.removeProperty('right');
+        slider.style.removeProperty('left');
+        slider_next.style.removeProperty('left');
+        //slider.style.right = `${screenWidth}px`;
+        slider_next.style.left = '0px';
+        for (let count = 0; count < screenWidth; count += 1) {
+            setTimeout(function(){
+               // slider.style.right = `${screenWidth - count}px`;
+                slider_next.style.left = `${count}px`;
+            
+            }, 300); 
+        }
+        statusSlider = 0;
     }
 });  
 // Portfolio
