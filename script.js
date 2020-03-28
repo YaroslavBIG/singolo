@@ -204,6 +204,16 @@ getElById('portfolio_images').addEventListener('click', (event) => {
 
 // submit
 
+function disableScrolling(){
+    const x = window.scrollX;
+    const y = window.scrollY;
+    window.onscroll = function(){window.scrollTo(x, y);};
+}
+
+function enableScrolling(){
+    window.onscroll = function(){};
+}
+
 const quoteForm = document.getElementById('quote'); // Form
 const subject = document.getElementById('subject'); // Subject input
 const discript = document.getElementById('discript'); // Discription input
@@ -216,9 +226,9 @@ const buttonOk = document.getElementById('button_ok');
 const insertAdAfterBegin = (el, htmlText) => el.insertAdjacentHTML('afterBegin', htmlText); // insertAdjacentHTML foo
 
 quoteForm.addEventListener('submit', (event) => {
+    
     event.preventDefault();
     modWindow.classList.remove('hidden');
-// insertAdAfterBegin(subjMod, `<p id="subjectModal"><strong>Тема: </strong>${subject.value}</p>`)
     insertAdAfterBegin(modWindowH2, 'Письмо отправлено'); //Status
     
     const safetyTextIns = (el, textValue, tit) => {
@@ -230,15 +240,18 @@ quoteForm.addEventListener('submit', (event) => {
     subject.value ?  safetyTextIns(subjMod, subject.value, 'Тема:') : safetyTextIns(subjMod, 'Без темы', '');
                        
     discript.value ? safetyTextIns(discriptMod, discript.value, 'Описание:') : safetyTextIns(discriptMod, 'Без описания', '');
-
+    disableScrolling();
+   
 });
 
 buttonOk.addEventListener('click', function(event) {
+    
     quoteForm.reset();
     modWindow.classList.add('hidden');
     modWindowH2.innerHTML = '';
     modWindow.querySelector('.subj_mod').remove();
     modWindow.querySelector('.discript_mod').remove();
+    enableScrolling()
 })
 
 // Hamburger
