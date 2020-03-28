@@ -155,9 +155,6 @@ header .wrapper {
     padding-inline-start: 58px;
 }
 
-.menu-mobile_table a:hover {
-    color: #f06c64;
-}
 
 .menu-mobile_item {
     display: flex;
@@ -201,9 +198,6 @@ header .wrapper {
     font-weight: 700;
 }
 
-.logo:hover {
-    color: #f06c64;
-}
 
 .logo h1::after {
     content: "*";
@@ -225,10 +219,6 @@ header .wrapper {
     margin-block-start: 16px;
     margin-block-end: 0px;
     padding-inline-start: 0;
-}
-
-.header__menu_table a:hover {
-    color: #f06c64;
 }
 
 .table_item {
@@ -273,12 +263,6 @@ main .wrapper {
     position: absolute;
     z-index: 9;
     opacity: 0.8;
-}
-
-
-.slider__button:hover {
-    filter: opacity(25%);
-    -webkit-filter: opacity(25%);
 }
 
 .slider__button:active {
@@ -401,11 +385,6 @@ main .wrapper {
     -ms-transition: all 1s ease-out;
     -o-transition: all 1s ease-out;
     transition: all 1s ease-out;
-}
-
-.slider-next__button:hover {
-    filter: opacity(25%);
-    -webkit-filter: opacity(25%);
 }
 
 .left-next {
@@ -558,10 +537,6 @@ main .wrapper {
     line-height: 21px;
 }
 
-.services_item:hover {
-    cursor: pointer;
-}
-
 .services-ico {
     display: grid;
     margin-top: 38px;
@@ -702,11 +677,6 @@ main .wrapper {
     line-height: 15pt;
 }
 
-/* Interactive Navigation Buttons Task */
-.menu_link:hover {
-    border: solid 1px #f2f2f2;
-}
-
 .menu_link:active {
     border: solid 1px #666d89;
 }
@@ -804,34 +774,6 @@ main .wrapper {
     background-position: -36px -60px;
 }
 
-.portfolio_item .portfolio_img_size:hover:not(:nth-child(1)),
-.portfolio_item .portfolio_img_size:hover:not(:nth-child(10)) {
-    -webkit-transition: all 1s ease-out;
-    -moz-transition: all 1s ease-out;
-    -ms-transition: all 1s ease-out;
-    -o-transition: all 1s ease-out;
-    transition: all 1s ease-out;
-    background-position: 0px 0px;
-}
-
-.portfolio-images .portfolio_item .portfolio_img-10:hover {
-    -webkit-transition: all 1s ease-out;
-    -moz-transition: all 1s ease-out;
-    -ms-transition: all 1s ease-out;
-    -o-transition: all 1s ease-out;
-    transition: all 1s ease-out;
-    background-position: -186px -322px;
-}
-
-.portfolio-images .portfolio_item .portfolio_img-1:hover {
-    -webkit-transition: all 1s ease-out;
-    -moz-transition: all 1s ease-out;
-    -ms-transition: all 1s ease-out;
-    -o-transition: all 1s ease-out;
-    transition: all 1s ease-out;
-    background-position: 57px -11px;
-}
-
 .portfolio_border {
     width: initial;
     height: -webkit-fill-available;
@@ -927,10 +869,6 @@ main .wrapper {
     line-height: 16pt;
 }
 
-.photo:hover {
-    cursor: pointer;
-}
-
 .photo:first-child p {
     margin-left: 0px;
     letter-spacing: -0.06px;
@@ -954,11 +892,6 @@ main .wrapper {
     border-radius: 50%;
     -ms-border-radius: 50%;
     -o-border-radius: 50%;
-}
-
-/*Interactive ICO Social Task*/
-.ico-social_circle:hover {
-    border-color: #161616;
 }
 
 .ico-social_circle:active {

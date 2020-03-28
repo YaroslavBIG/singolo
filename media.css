@@ -1,3 +1,69 @@
+@media (hover) , (min-width:0\0) , (min--moz-device-pixel-ratio:0){
+    .logo:hover {
+        color: #f06c64;
+    }
+
+    .header__menu_table a:hover {
+        color: #f06c64;
+    }
+    
+    
+    .slider__button:hover {
+        filter: opacity(25%);
+        -webkit-filter: opacity(25%);
+    }
+
+    .slider-next__button:hover {
+        filter: opacity(25%);
+        -webkit-filter: opacity(25%);
+    }
+
+    .menu_link:hover {
+        border: solid 1px #f2f2f2;
+    }
+
+    .portfolio_item .portfolio_img_size:hover:not(:nth-child(1)),
+    .portfolio_item .portfolio_img_size:hover:not(:nth-child(10)) {
+        -webkit-transition: all 1s ease-out;
+        -moz-transition: all 1s ease-out;
+        -ms-transition: all 1s ease-out;
+        -o-transition: all 1s ease-out;
+        transition: all 1s ease-out;
+        background-position: 0px 0px;
+    }
+
+    .portfolio-images .portfolio_item .portfolio_img-10:hover {
+        -webkit-transition: all 1s ease-out;
+        -moz-transition: all 1s ease-out;
+        -ms-transition: all 1s ease-out;
+        -o-transition: all 1s ease-out;
+        transition: all 1s ease-out;
+        background-position: -186px -322px;
+    }
+
+    .portfolio-images .portfolio_item .portfolio_img-1:hover {
+        -webkit-transition: all 1s ease-out;
+        -moz-transition: all 1s ease-out;
+        -ms-transition: all 1s ease-out;
+        -o-transition: all 1s ease-out;
+        transition: all 1s ease-out;
+        background-position: 57px -11px;
+    }
+
+    .photo:hover {
+        cursor: pointer;
+    }
+
+    .ico-social_circle:hover {
+        border-color: #161616;
+    }
+
+    .ico-social_circle:hover {
+        border-color: #161616;
+    }
+        
+}
+
 @media screen and (max-width:1019px) and (min-width:768px){
     body {
         width: 768px;
@@ -268,6 +334,26 @@ main .wrapper {
     border-radius: 3px;
     background-color: #464b5e;
 }
+
+.portfolio_item .portfolio_img-1 {
+    background-position: -43px -62px;
+}
+
+.portfolio_item > div {
+    background-size: 158% auto;
+    background-repeat: no-repeat;
+    background-position: 0px 0px;
+}
+
+.portfolio_item .portfolio_img-10 {
+    background-image: url(./assets/img/portfolio/Project-100.png);
+    background-position: -72px -68px;
+}
+
+.portfolio_item .portfolio_img-11 {
+    background-position: -72px -110px;
+}
+
 
 .portfolio-images :nth-child(n+9) {
     display: none;
