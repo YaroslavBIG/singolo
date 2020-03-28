@@ -64,12 +64,12 @@ for(const el of clicableElements) {
 const slider = getElById('slider');
 const slider_next = getElById('slider_next');
 let statusSlider = 0;
-let sliderPos = 'right';
+//let sliderPos = 'right';
 
 getElById('button_left').addEventListener('click', (event) => {
     
     console.log('click left');
-    const screenWidth = document.documentElement.clientWidth
+    const screenWidth = document.documentElement.clientWidth + 10;
     if(statusSlider === 0) {
         
             slider_next.style.removeProperty('left');

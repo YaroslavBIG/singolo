@@ -286,6 +286,7 @@ main .wrapper {
 
 .iphone {
     position: relative;
+    z-index: 0;
 }
 
 .base {
