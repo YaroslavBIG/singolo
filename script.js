@@ -1,22 +1,22 @@
 //Menu
 
 const menu = document.getElementById('header__menu');
-const menu_all = document.getElementsByClassName('scroll');
-const menuHeight = menu.offsetHeight;
+const menu_all = document.querySelectorAll('.scroll');
+const menuHeight = 73;
 
-document.addEventListener('scroll', onScroll);
-
-menu.addEventListener('click', (event) => {
+for(const el of menu_all) {
+el.addEventListener('click', (event) => {
     event.preventDefault();
-    
+
     const elHref = event.target.getAttribute('href').substr(1);
     const elPos = getElById(`${elHref}`).offsetTop;
     const scrlTo = elPos - menuHeight;
 
-    menu.querySelectorAll('a').forEach(el => el.classList.remove('header__menu_active'))
+    el.querySelectorAll('a').forEach(el => el.classList.remove('header__menu_active'))
     event.target.classList.add('header__menu_active');
     window.scrollTo(0, `${scrlTo}`);
 });
+}
 
 const menu_portfolio = document.getElementById('porfolio_menu');
 
@@ -26,6 +26,7 @@ menu_portfolio.addEventListener('click', (event) => {
 });
 
 // Menu Active Scroll
+document.addEventListener('scroll', onScroll);
 function onScroll(event) {
     const currentPos = window.scrollY;
     const menuDiv = document.querySelectorAll('main > div')
