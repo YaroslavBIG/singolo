@@ -68,6 +68,7 @@ for(const el of clicableElements) {
 
 const slider = getElById('slider');
 const slider_next = getElById('slider_next');
+const screenWidth = document.documentElement.clientWidth + 20;
 let statusSlider = 0;
 
 const removePropertySlider = () => {
@@ -78,8 +79,6 @@ const removePropertySlider = () => {
 //let sliderPos = 'right';
 
 getElById('button_left').addEventListener('click', (event) => {
-    const screenWidth = document.documentElement.clientWidth + 10;
-    
     if(statusSlider === 0) {
         removePropertySlider()
         slider_next.style.left = `${screenWidth}px`;
@@ -105,8 +104,6 @@ getElById('button_left').addEventListener('click', (event) => {
   
 
 getElById('button_right').addEventListener('click', (event) => {
-    const screenWidth = document.documentElement.clientWidth + 10;
-
     if(statusSlider === 0) {
         removePropertySlider()
         slider_next.style.right = `${screenWidth}px`;
