@@ -329,5 +329,15 @@ main .wrapper {
     left: 27%;
 }
 
+.footer__wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.footer__wrapper span {
+    display: none;
+
+}
+
 }
 

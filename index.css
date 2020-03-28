@@ -1176,7 +1176,7 @@ main .wrapper {
 
 .footer__wrapper {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     min-height: 76px;
     padding-right: 57px;
     padding-left: 42px;
