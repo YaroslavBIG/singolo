@@ -1,6 +1,7 @@
 //Menu
 
 const menu = document.getElementById('header__menu');
+const menu_all = document.getElementsByClassName('scroll');
 const menuHeight = menu.offsetHeight;
 
 document.addEventListener('scroll', onScroll);
@@ -28,7 +29,7 @@ menu_portfolio.addEventListener('click', (event) => {
 function onScroll(event) {
     const currentPos = window.scrollY;
     const menuDiv = document.querySelectorAll('main > div')
-    const links = menu.querySelectorAll('a')
+    const links = document.querySelectorAll('.scroll > li > a')
 
     menuDiv.forEach((el) => {
         if(el.offsetTop <= currentPos + menuHeight && (el.offsetTop + el.offsetHeight) > currentPos - menuHeight) {
@@ -237,6 +238,18 @@ buttonOk.addEventListener('click', function(event) {
     modWindowH2.innerHTML = '';
     modWindow.querySelector('.subj_mod').remove();
     modWindow.querySelector('.discript_mod').remove();
-    
-    
 })
+
+// Hamburger
+const hamburger = document.getElementById('hamburger__button');
+const menu_hamburger = document.getElementById('hamburger__menu');
+const blur_hamburger = document.getElementById('blur');
+hamburger.addEventListener('click', (event) => {
+    hamburger.classList.toggle('hamburger_rotate');
+    menu_hamburger.classList.toggle('hidden');
+    
+    blur_hamburger.addEventListener('click', (event) => {
+        hamburger.classList.remove('hamburger_rotate');
+        menu_hamburger.classList.add('hidden');
+    });
+});
