@@ -7,7 +7,6 @@ const menuHeight = 73;
 for(const el of menu_all) {
 el.addEventListener('click', (event) => {
     event.preventDefault();
-
     const elHref = event.target.getAttribute('href').substr(1);
     const elPos = getElById(`${elHref}`).offsetTop;
     const scrlTo = elPos - menuHeight;
@@ -15,6 +14,10 @@ el.addEventListener('click', (event) => {
     el.querySelectorAll('a').forEach(el => el.classList.remove('header__menu_active'))
     event.target.classList.add('header__menu_active');
     window.scrollTo(0, `${scrlTo}`);
+    if(event.target.parentElement.classList.contains('menu-mobile_item')) {
+        hamburger.classList.remove('hamburger_rotate');
+        menu_hamburger.classList.add('hidden');
+    }
 });
 }
 
