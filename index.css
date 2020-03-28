@@ -1272,7 +1272,7 @@ main .wrapper {
 }
 
 .discript_mod {
-    overflow: scroll;
+    overflow: hidden;
     max-height: 115px;
 }
 
