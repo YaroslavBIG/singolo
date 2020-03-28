@@ -69,30 +69,35 @@ for(const el of clicableElements) {
 const slider = getElById('slider');
 const slider_next = getElById('slider_next');
 let statusSlider = 0;
+
+const removePropertySlider = () => {
+    slider_next.style.removeProperty('left');
+    slider_next.style.removeProperty('right');
+};
+
 //let sliderPos = 'right';
 
 getElById('button_left').addEventListener('click', (event) => {
-    
-    console.log('click left');
     const screenWidth = document.documentElement.clientWidth + 10;
+    
     if(statusSlider === 0) {
-        
-            slider_next.style.removeProperty('left');
-            slider_next.style.removeProperty('right');
-        for (let count = 0; count <= screenWidth; count += 1) {
+        removePropertySlider()
+        slider_next.style.left = `${screenWidth}px`;
+        let currentPosSl = screenWidth;
+    for (let count = 0; count < screenWidth; count += 1) {
             setTimeout(function(){
-                slider.style.right = `${count}px`;
-            }, 100);
+                currentPosSl -= 1;
+                slider_next.style.left = `${currentPosSl}px`;
+            }, 300);
         }
         statusSlider = 1;
     } else {
-        
-            slider.style.removeProperty('right');
-            slider.style.removeProperty('left');
+        removePropertySlider()
+        slider_next.style.right = '0px';
         for (let count = 0; count < screenWidth; count += 1) {
             setTimeout(function(){
                 slider_next.style.right = `${count}px`;
-            }, 100);
+            }, 300); 
         }
         statusSlider = 0;
     }
@@ -100,47 +105,31 @@ getElById('button_left').addEventListener('click', (event) => {
   
 
 getElById('button_right').addEventListener('click', (event) => {
-    console.log('click right')
-    console.log(statusSlider)
-    //slider.classList.toggle("hidden");
-    //slider_next.classList.toggle("hidden");
-    
-    const screenWidth = document.documentElement.clientWidth
+    const screenWidth = document.documentElement.clientWidth + 10;
+
     if(statusSlider === 0) {
-        
-        console.log(statusSlider)
-           slider.style.removeProperty('left');
-            slider_next.style.removeProperty('left');
-            slider.style.removeProperty('right');
-            slider_next.style.removeProperty('right');
-            //slider_next.style.right = `${screenWidth}px`;
-            slider.style.left = '0px';
-        for (let count = 0; count <= screenWidth; count += 1) {
-            setTimeout(function(){
-               // slider_next.style.right = `${screenWidth - count}px`;
-                slider.style.left = `${count}px`;
-            }, 300);
+        removePropertySlider()
+        slider_next.style.right = `${screenWidth}px`;
+        let currentPosSl = screenWidth;
+    for (let count = 0; count < screenWidth; count += 1) {
+        setTimeout(function(){
+            currentPosSl -= 1;
+            slider_next.style.right = `${currentPosSl}px`;
+        }, 300);
         }
         statusSlider = 1;
     } else {
-        
-        console.log(statusSlider)
-        slider.style.removeProperty('right');
-        slider_next.style.removeProperty('right');
-        slider.style.removeProperty('left');
-        slider_next.style.removeProperty('left');
-        //slider.style.right = `${screenWidth}px`;
+        removePropertySlider()
         slider_next.style.left = '0px';
         for (let count = 0; count < screenWidth; count += 1) {
             setTimeout(function(){
-               // slider.style.right = `${screenWidth - count}px`;
                 slider_next.style.left = `${count}px`;
-            
             }, 300); 
         }
         statusSlider = 0;
     }
 });  
+
 // Portfolio
 
 function randomInteger(min, max) {
