@@ -76,8 +76,6 @@ const removePropertySlider = () => {
     slider_next.style.removeProperty('right');
 };
 
-//let sliderPos = 'right';
-
 getElById('button_left').addEventListener('click', (event) => {
     if(statusSlider === 0) {
         removePropertySlider()
@@ -102,7 +100,6 @@ getElById('button_left').addEventListener('click', (event) => {
     }
 });  
   
-
 getElById('button_right').addEventListener('click', (event) => {
     if(statusSlider === 0) {
         removePropertySlider()
@@ -135,59 +132,47 @@ function randomInteger(min, max) {
     return Math.floor(rand);
   }
 
-const portfolio = document.querySelectorAll('#portfolio_images > div > div')
-const portfolioElQuant = portfolio.length
-
+const portfolio = document.querySelectorAll('#portfolio_images > div > div');
+const portfolioElQuant = portfolio.length;
+const portfolioimgs = document.querySelectorAll('#portfolio_images > div');
 menu_portfolio.addEventListener('click', (event) => {
-    for(const el of portfolio) {
-        for(let count = 1; count <= portfolioElQuant; count += 1) {
-            const classLst = el.classList;
-            const cls = `portfolio_img-${count}`;
-            classLst.remove(cls);
-        }
-    };
-
-
-    //all selector
+    portfolio.forEach(el => el.classList.remove('portfolio_border'))
+    
     if(event.target.classList.contains('all')) {
-        portfolio.forEach(el => el.classList.remove('portfolio_border'))
-        for(let count = 1; count <= portfolioElQuant; count += 1) {
-            const classLst = document.querySelector(`#portfolio_images > div:nth-child(${count}) > div`).classList
-            const cls = `portfolio_img-${count}`
-            classLst.add(cls)
-            }
-        } else { //otherCat
-        portfolio.forEach(el => el.classList.remove('portfolio_border'))
-        for(const el of portfolio) {
-            const classLst = el.classList
-            for (let count = 1; count <= portfolioElQuant; count += 1) {
-                const cls = `portfolio_img-${count}`
-                if(classLst.contains(cls)) {
-                    classLst.remove(cls)
-                }
+        portfolio.forEach(el => el.remove()); // Remove element DOM Cat ALL
+        for (let count = 0; count <= 12; count += 1){
+            const el = portfolioimgs[count];
+            let divimg = document.createElement('div');
+            divimg.className = `portfolio_img-${count + 1} portfolio_img_size`;
+            el.firstChild.replaceWith(divimg); // Insert element DOM Cat ALL
+        }
+        } else { 
+        portfolio.forEach(el => el.remove()); // Remove element DOM Other cat
+            const randomArr = [];
+            while(randomArr.length < 12) {
+                const num = randomInteger(1, 12);
+                if (!randomArr.includes(num)) randomArr.push(num);
+            };
+            for (let count = 0; count <= 12; count += 1){
+                const el = portfolioimgs[count];
+                const divimg = document.createElement('div');
+                const counter = randomArr.pop();
+                divimg.className = `portfolio_img-${counter} portfolio_img_size`;
+                el.firstChild.replaceWith(divimg); // Insert element Other cat
             }
         }
         
-        const randomArr = [];
-        while(randomArr.length < 12) {
-            const num = randomInteger(1, 12);
-            if (!randomArr.includes(num)) randomArr.push(num);
-        };
-
-        for(let count = 0; count < 12; count += 1) {
-            const el = portfolio[count].classList;
-            const clsNum = randomArr[count];
-            const cls = `portfolio_img-${clsNum}`;
-            el.add(cls);
-        }
-    }
 });
 
 // border
 
 getElById('portfolio_images').addEventListener('click', (event) => {
-    portfolio.forEach(el => el.classList.remove('portfolio_border'))
+    const bordered = document.getElementsByClassName('portfolio_border')
+    for(const el of bordered){
+        el.classList.remove('portfolio_border')
+    }
     event.target.classList.add('portfolio_border');
+    console.log(event.target)
 });
 
 
