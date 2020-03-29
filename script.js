@@ -135,10 +135,11 @@ function randomInteger(min, max) {
 const portfolio = document.querySelectorAll('#portfolio_images > div > div');
 const portfolioElQuant = portfolio.length;
 const portfolioimgs = document.querySelectorAll('#portfolio_images > div');
-menu_portfolio.addEventListener('click', (event) => {
+const menuPortfolioClick = document.querySelectorAll('.menu_link');
+menuPortfolioClick.forEach(el => 
+el.addEventListener('click', (event) => {
     portfolio.forEach(el => el.classList.remove('portfolio_border'))
-    
-    if(event.target.classList.contains('all')) {
+        if(event.target.classList.contains('all')) {
         portfolio.forEach(el => el.remove()); // Remove element DOM Cat ALL
         for (let count = 0; count <= 12; count += 1){
             const el = portfolioimgs[count];
@@ -162,8 +163,8 @@ menu_portfolio.addEventListener('click', (event) => {
             }
         }
         
-});
-
+    })
+);
 // border
 
 getElById('portfolio_images').addEventListener('click', (event) => {
